@@ -1,5 +1,5 @@
 *,*::before,*::after{
-    // outline: 1px solid gray; 
+    outline: 1px solid gray; 
 }
 
 body{
@@ -48,6 +48,7 @@ h5,
 h6{
     margin-bottom: 0;
     line-height: 1.2;
+    letter-spacing: .05em;
 }
 
 p{
