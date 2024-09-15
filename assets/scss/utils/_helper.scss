@@ -14,9 +14,9 @@ $max: 50;
 
 
 @for $i from 0 through $max {
+    .fz-sm#{$i} {@include rwd-sm-max {font-size: $i*4px;}}
+    .fz-md#{$i} {@include rwd-md-max {font-size: $i*4px;}}
     .fz-lg#{$i} {@include rwd-lg-max {font-size: $i*4px;}}
-    .fz-md#{$i}.fz-md#{$i} {@include rwd-md-max {font-size: $i*4px;}}
-    .fz-sm#{$i}.fz-sm#{$i}.fz-sm#{$i} {@include rwd-sm-max {font-size: $i*4px;}}
 }
 //desktop first 從桌機開始刻到手機
 // RWD字體大小使用說明：加入三種斷點
@@ -36,9 +36,9 @@ $max: 50;
 
 
 .fz-mini{font-size: 14px;}
-.fz-lg-mini {@include rwd-lg-max {font-size: 14px;}}
+.fz-sm-mini {@include rwd-sm-max {font-size: 14px;}}
 .fz-md-mini {@include rwd-md-max {font-size: 14px;}}
-.fz-sm-mini.fz-sm-mini {@include rwd-sm-max {font-size: 14px;}}
+.fz-lg-mini {@include rwd-lg-max {font-size: 14px;}}
 //設計稿上有 14px 特殊字體大小 
 // .fz-mini = font size 14px
 // .fz-sm-mini = sm 斷點以下 font size 14px
@@ -199,9 +199,3 @@ $max: 50;
 // .px-lg5 = lg 斷點以下 padding-left 20px + padding-right 20px
 // .py-lg6 = lg 斷點以下 padding-top 24px + padding-bottom 24px
 // .....以此類推
-
-.bg-cover{
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
