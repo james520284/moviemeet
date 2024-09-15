@@ -4,12 +4,506 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我與劇中主角相會時</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Movie Meet</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
 
-    <p>test0912</p>
+   <main class="index-main"> 
+    <section class="container-fluid banner">
+      <div class="container mb-4">
+       <!--banner文字-->  
+        <div class="py-5">
+          <div class="text-sm-center text-lg-start">
+            <img src="../assets/images/deco/人氣聊串.png" alt="人氣聊串" class="mb-lg35">
+          </div>
+          <div class="post-text mb32 pl12 d-none d-lg-block"> 
+          <p class="fs-4 mt32">#68</p>
+          <h4 class="display-5 fw-bold col-lg-6 my-4">一天追完！劇情好刺激！揪劇友一起討論啊！</h4>
+          <div class="tag">
+            <a href="#" class="btn btn-gray-300 rounded-pill" role="button">#地面師</a>
+            <a href="#" class="btn btn-gray-300 rounded-pill mx5 " role="button">#大推特推</a>
+            <a href="#" class="btn btn-gray-300 rounded-pill" role="button">#無雷</a>
+          </div>    
+        </div>
+         <!--其他串聊-->
+        <%- include('./layout/Carousel_post'); -%>
+
+        </div>
+      </div>
+    </section>
+
+   <!-- 熱門標籤-->
+    <div class="middel-tag d-none d-lg-block">
+      <div class="container d-flex flex-lg-row flex-sm-column">
+      <!--電腦版--> 
+        <div class="row position-relative tag-bg"> 
+          <picture >
+            <source media="(min-width: 992px)" srcset="../assets/images/deco/熱門標籤 背景.png">
+            <img src="../assets/images/deco/熱門標籤 背景.png" alt="熱門標籤">
+          </picture>
+          <div class="tag-title">
+            <h3 class="d-inline position-absolute top-50 start-50 translate-middle text-nowrap">#熱門標籤</h3>
+        </div>
+      </div>
+        <div class="all-tag container ml6 tag-bg px7 py20 fz-5 d-none d-lg-block">
+          <!--第一行-->
+                   <div class="row justify-content-lg-around">
+                    <div class="col-lg-2">
+                      <box>
+                        <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>大推特推</a>
+                      </box>
+                    </div>
+                    <div class="col-lg-2">
+                      <box>
+                        <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>電影</a>
+                      </box>
+                    </div>
+                    <div class="col-lg-2">
+                      <box>
+                        <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>梗圖蓋樓</a>
+                      </box>
+                    </div>
+                    <div class="col-lg-2">
+                      <box>
+                        <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>地面師</a>
+                      </box>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block">
+                      <box>
+                        <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>宮門</a>
+                      </box>
+                    </div>
+                </div>
+          <!--第二行-->
+              <div class="row justify-content-around text-end py9">
+                <div class="col-lg-2">
+                  <box>
+                    <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>揪團</a>
+                  </box>
+                </div>
+                <div class="col-lg-2">
+                  <box>
+                    <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>熱門標籤</a>
+                  </box>
+                </div>
+                <div class="col-lg-2">
+                  <box>
+                    <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>地面師</a>
+                  </box>
+                </div>
+                <div class="col-lg-2">
+                  <box>
+                    <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>鬼滅之刃</a>
+                  </box>
+                </div>
+                <div class="col-lg-2">
+                  <box>
+                    <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>懸疑</a>
+                  </box>
+                </div>
+            </div>
+          <!--第三行-->
+            <div class="row justify-content-around">
+              <div class="col-lg-2">
+                <box>
+                  <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>鬼滅之刃</a>
+                </box>
+              </div>
+              <div class="col-lg-2">
+                <box>
+                  <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>懸疑</a>
+                </box>
+              </div>
+              <div class="col-lg-2">
+                <box>
+                  <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>梗樓蓋圖</a>
+                </box>
+              </div>
+              <div class="col-lg-2">
+                <box>
+                  <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>動漫</a>
+                </box>
+              </div>
+              <div class="col-lg-2">
+                <box>
+                  <a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>活動資訊</a>
+                </box>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!--手機版-->
+     <div class="middel-tag bg-dark d-block d-lg-none">   
+       <div class="container">
+        <div class="tag-title pt10 mb6">
+          <h3 class="text-nowrap text-center">#熱門標籤</h3>
+       </div>
+       <div class="container px3 pb10">
+        <div class="row">
+          <div class="col-5 mb3"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>大推特推</a></div>
+          <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>電影</a></div>
+        </div>
+        <div class="row justify-content-around ">
+          <div class="col-5 mb3"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>梗圖蓋樓</a></div>
+          <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>地面師</a></div>
+        </div>
+        <div class="row">
+          <div class="col-5 mb3"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>宮門</a></div>
+          <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>揪團</a></div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-5 mb3"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>熱門標籤</a></div>
+          <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>地面師</a></div>
+        </div>
+        <div class="row">
+          <div class="col-5 mb3"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>鬼滅之刃</a></div>
+          <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>懸疑</a></div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>動漫</a></div>
+          <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>活動資訊</a></div>
+        </div>
+
+
+        
+      </div> 
+
+
+      </div>
+    </div>
+    
+  
+  
+
+   <!--排行榜-->
+    <div class="ranking my10">
+     <!--熱門-->
+      <div class="popular container my10 mb-lg0">
+        <div class="row gy-2">
+          <div class="col-lg-12">
+            <box class="d-flex align-items-center justify-content-center">
+              <h4 class="my7 fz-12 fw-normal">熱門</h4>
+              <img src="../assets/images/deco/001.png" alt="Rectangle" class="mx5">
+              <div>
+                <p class="fz-mini fw-lighter">Popular Rankings</p>
+                <h6 class="fw-light">聲量榜</h6>
+              </div>
+            </box>
+          </div>
+        </div>  
+       <!--電腦版-->
+       <div class="container d-none d-lg-block">
+        <div class="row">
+          <div class="col-lg-4 position-relative">
+            <div class="rankingcard">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
+                <img src="../assets/images/ranking/pop/pop-1.png" alt="pop-rankingcard1" class="pt20">
+              </picture>
+              <div class="number position-absolute top-0 start-0">
+                <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
+              </div>
+           </div>
+          </div> 
+          <div class="col-lg-4 position-relative">
+            <div class="rankingcard">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-2.png">
+                <img src="../assets/images/ranking/pop/pop-2.png" alt="pop-rankingcard2" class="pt20">
+              </picture>
+              <div class="number position-absolute top-0 start-0">
+                <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
+              </div>
+             </div>
+          </div>
+         <div class="col-lg-4">
+          <div class="rankingcard position-relative">
+            <picture>
+              <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
+              <img src="../assets/images/ranking/pop/pop-3.png" alt="pop-rankingcard2" class="pt20">
+            </picture>
+            <div class="number position-absolute top-0 start-0">
+              <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
+            </div>
+           </div>
+         </div>
+        </div>
+       </div>
+     </div>
+  
+
+      <!--手機輪播版-->
+  <div class="container d-block d-lg-none">
+    <div id="carouselpopularRank" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselpopularRank" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselpopularRank" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselpopularRank" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item rankingcard active position-relative">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
+            <img src="../assets/images/ranking/pop/pop-1.png" alt="pop-rankingcard1" class="pt20 w-100">
+          </picture>
+          <div class="number position-absolute top-0 start-0">
+            <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
+          </div>
+        </div>
+        <div class="carousel-item position-relative">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-2.png">
+            <img src="../assets/images/ranking/pop/pop-2.png" alt="pop-rankingcard2" class="pt20 w-100">
+          </picture>
+          <div class="number position-absolute top-0 start-0">
+            <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
+          </div>
+         </div>
+        <div class="carousel-item position-relative">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
+            <img src="../assets/images/ranking/pop/pop-3.png" alt="pop-rankingcard2" class="pt20 w-100">
+          </picture>
+          <div class="number position-absolute top-0 start-0">
+            <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+  <!--新劇-->
+  <div class="new container my10 mb-lg0">
+    <div class="row gy-2 ">
+      <div class="col-lg-12 ">
+        <box class="d-flex align-items-center justify-content-center">
+          <h4 class="my7 fz-12 fw-normal">新劇</h4>
+          <img src="../assets/images/deco/001.png" alt="Rectangle" class="mx5">
+          <div>
+            <p class="fz-mini fw-lighter">LATEST Rankings</p>
+            <h6 class="fw-light">敲碗榜</h6>
+          </div>
+        </box>
+      </div>
+    </div>  
+    <!--電腦版-->
+    <div class="container d-none d-lg-block">
+      <div class="row">
+        <div class="col-lg-4 position-relative">
+          <div class="rankingcard">
+            <picture>
+              <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
+              <img src="../assets/images/ranking/pop/pop-3.png" alt="new-rankingcard1" class="pt20">
+            </picture>
+            <div class="number position-absolute top-0 start-0">
+              <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
+            </div>
+         </div>
+        </div> 
+        <div class="col-lg-4 position-relative">
+          <div class="rankingcard">
+            <picture>
+              <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/new-2.png">
+              <img src="../assets/images/ranking/pop/new-2.png" alt="new-rankingcard2" class="pt20">
+            </picture>
+            <div class="number position-absolute top-0 start-0">
+              <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
+            </div>
+           </div>
+        </div>
+       <div class="col-lg-4">
+        <div class="rankingcard position-relative">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
+            <img src="../assets/images/ranking/pop/pop-1.png" alt="new-rankingcard3" class="pt20">
+          </picture>
+          <div class="number position-absolute top-0 start-0">
+            <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
+          </div>
+         </div>
+      </div>
+  </div>
+    </div>
+   <!--手機版輪播-->
+   <div class="container d-block d-lg-none">
+    <div id="carouselnewRank" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselnewRank" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselnewRank" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselnewRank" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item rankingcard active position-relative">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
+            <img src="../assets/images/ranking/pop/pop-3.png" alt="new-rankingcard1" class="pt20 w-100">
+          </picture>
+          <div class="number position-absolute top-0 start-0">
+            <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
+          </div>
+        </div>
+        <div class="carousel-item position-relative">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/new-2.png">
+            <img src="../assets/images/ranking/pop/new-2.png" alt="new-rankingcard2" class="pt20 w-100">
+          </picture>
+          <div class="number position-absolute top-0 start-0">
+            <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
+          </div>
+         </div>
+        <div class="carousel-item position-relative">
+          <picture>
+            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
+            <img src="../assets/images/ranking/pop/pop-1.png" alt="new-rankingcard3" class="pt20 w-100">
+          </picture>
+          <div class="number position-absolute top-0 start-0">
+            <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+ </div>    
+    </div> 
+
+
+
+  <div class="intro">
+    <div class="container">
+      <!--圖片左邊-->
+      <div class="row justify-content-center align-items-center  g-0 position-relative">
+          <div class="col-lg-7 mx-lg3 pb-lg10">
+            <img src="../assets/images/deco/intro-1.png" alt="個人頁面" class="py5">
+        </div>
+        <div class="col-lg-5 align-items-center">
+         <!--電腦版--> 
+          <div class="text d-none d-lg-block">
+            <h4>專屬個人主頁，做自己的樣子</h4>
+            <div class="bottom position-relative">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的主頁<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+          <!--手機版-->
+          <div class="text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
+            <h4>專屬個人主頁，做自己的樣子</h4>
+            <div class="bottom position-relative introbg mt4 mb10">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的主頁<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+        </div>
+      </div>
+      <!--圖片右邊-->
+      <div class="row justify-content-center align-items-center g-0 position-relative">
+        <div class="col-lg-4 offset-md-1 align-items-center">
+          <!--電腦版-->
+          <div class="text d-none d-lg-block">
+            <h4 class="d-inline">找到新劇友，一起穿越劇中世界</h4>
+            <div class="bottom position-relative">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景" class="py5">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的劇友<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+          <!--手機版-->
+          <div class="text text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
+            <h4 class="d-inline">找到新劇友，一起穿越劇中世界</h4>
+            <div class="bottom position-relative">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景" class="mt5 mb10">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的劇友<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+        </div>
+        <div class="col-lg-7 mx-lg3 py-lg18">
+          <img src="../assets/images/deco/intro-2.png" alt="我的劇友">
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center g-0 position-relative"> 
+        <div class="col-lg-7 mx-lg3 py-lg10">
+          <img src="../assets/images/deco/intro-3.png" alt="我的角色卡" class="py5">
+        </div>
+        <div class="col-lg-5 align-items-center">
+         <!--電腦版-->  
+          <div class="text d-none d-lg-block">
+            <h4>扮演最愛角色在線跨劇互動</h4>
+            <div class="bottom position-relative">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的角色卡<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+           <!--手機版-->
+           <div class="text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
+            <h4>扮演最愛角色在線跨劇互動</h4>
+            <div class="bottom position-relative introbg mt4 mb10">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的角色卡<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center g-0 position-relative">
+        <div class="col-lg-4 offset-md-1 align-items-center mt-lg10">
+          <!--電腦版-->
+          <div class="text d-none d-lg-block">
+            <h4 class="d-inline">典藏經典，二十年後復刻悸動</h4>
+            <div class="bottom position-relative">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景" class="py5">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的典藏文<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+          <!--手機版-->
+          <div class="text text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
+            <h4 class="d-inline">典藏經典，二十年後復刻悸動</h4>
+            <div class="bottom position-relative">
+              <picture>
+                <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
+                <img src="../assets/images/deco/002.png" alt="按鈕背景" class="py5">
+              </picture>
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的典藏文<i class="bi bi-chevron-right"></i></a>
+            </div>           
+          </div>
+        </div>
+        <div class="col-lg-7 mx-lg3 py-lg10">
+          <img src="../assets/images/deco/intro-4.png" alt="我的典藏文">
+        </div>
+      </div>
+    </div>
+  </div>  
+   </main> 
+
 
     <%- include('./layout/footer'); -%>
 

@@ -1,0 +1,41 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+      <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#logoutModal">登出</button></li>
+      <li><button class="dropdown-item btn-link" type="button"><a href="#">修改郵箱/密碼</a></button></li>
+      <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">刪除帳號</button></li>
+    </ul>
+  </div>
+
+
+  <!-- 登出 Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow bg-dark text-gray-300">
+        <div class="modal-body p10 text-center">
+          <h5 class="mb-0" id="logoutLabel">確定登出嗎？</h5>
+        </div>
+        <div class="modal-footer flex-nowrap">
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end py4"><strong>確定</strong></button>
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 text-gray-300" data-bs-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- 刪除 Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow bg-dark text-gray-300">
+        <div class="modal-body p10 text-center">
+          <h5 class="mb-0" id="deleteLabel">確定刪除嗎？</h5>
+        </div>
+        <div class="modal-footer flex-nowrap">
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end py4"><strong>確定</strong></button>
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 text-gray-300" data-bs-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
