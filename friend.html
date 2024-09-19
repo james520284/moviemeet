@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>我與劇中主角相會時</title>
+      <script type="module" crossorigin src="/moviemeet/assets/main-96d1959d.js"></script>
+      <link rel="stylesheet" href="/moviemeet/assets/main-438ebdd6.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark header-nav">
+    <div class="container">
+      <a class="navbar-brand py12 py-lg4" href="index.html"><img src="/moviemeet/assets/moviemeet logo-0fe13413.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
+        <!--手機版選單-->
+        <div class="d-lg-none">
+                <ul class="navbar-nav mt8">
+                  <li class="nav-item mb7">
+                    <a class="nav-link active text-gray-100" aria-current="page" href="#">熱門</a>
+                  </li>
+                  <li class="nav-item mb7">
+                    <a class="nav-link text-gray-100" href="#">新劇</a>
+                  </li>
+                  <li class="nav-item mb7">
+                    <a class="nav-link text-gray-100">劇友</a>
+                  </li>
+                  <li class="nav-item mb7">
+                    <a class="nav-link text-gray-100 ">典藏</a>
+                  </li>
+                  <li class="nav-item mb7">
+                    <a href="nav-link text-gray-100">註冊/登入</a>
+                  </li>
+                </ul>
+              <div class="search d-flex bg-gray-400 rounded-pill w-50 border-bg-gray-500 border-2">
+                <input class="form-control me-2 py-2 border-0 rounded-pill bg-gray-400 text-gray-300" type="search" placeholder="搜影劇、標籤" aria-label="Search">
+                <button class="btn" type="submit"><span class="material-symbols-outlined text-gray-300 fz-6 align-bottom">
+                  search
+                </span></button>
+              </div>
+            </div>
+        </div>
+
+        <!--電腦選單-->
+       <div class="d-none d-lg-block d-lg-flex align-items-center w-75 ml37 justify-content-between pcnav">
+        <div class="d-flex">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item mr8">
+              <a class="nav-link active text-gray-100" aria-current="page" href="#">熱門</a>
+            </li>
+            <li class="nav-item mr8">
+              <a class="nav-link text-gray-100" href="#">新劇</a>
+            </li>
+            <li class="nav-item mr8">
+              <a class="nav-link text-gray-100" href="friend.html">劇友</a>
+            </li>
+            <li class="nav-item mr8">
+              <a class="nav-link text-gray-100" href="#">典藏</a>
+            </li>
+          </ul>
+          <div class="search d-flex bg-gray-400 rounded-pill">
+            <input class="form-control me-2 border-0 rounded-pill bg-gray-400 text-gray-300" type="search" placeholder="搜影劇、標籤" aria-label="Search">
+            <button class="btn" type="submit"><span class="material-symbols-outlined text-gray-300">
+              search
+            </span></button>
+          </div>
+        </div>
+          <button type="button" class="btn btn-link text-gray-100 text-decoration-none">註冊/登入</button>
+       </div>
+
+
+    </div>
+  </nav>        <main class="friend-main">
+            <section class="sec1 py16 pt-sm6 pb-sm10">
+                <div class="container">
+                    <div class="d-flex align-items-lg-center">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center">
+                            <h1 class="fz-8 fz-sm5 mb-1">我的劇友</h1>
+                            <h5 class="text-gray-400 fz-sm-mini ml3 ml-md0">一起穿越劇中世界</h5>
+                        </div>
+                        <div class="d-flex align-items-center ms-auto">
+                            <!-- 劇友邀請 Button trigger modal -->
+                            <a href="#" class="invite-btn fz-6 fz-sm5 pr3 mr8 mr-md1 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#friendInviteModal">
+                                <i class="bi bi-envelope mr2  position-relative">
+                                    <span class="invite-alarm position-absolute top-0 start-100  p-1 bg-primary rounded-circle"></span>
+                                    <span class="visually-hidden">New alerts</span>
+                                </i>
+                                <span class="d-none d-md-block">劇友邀請</span>
+                            </a>
+                            <!-- +新劇友 Button trigger modal -->
+                            <a href="#" class="add-btn fz-6 fz-sm5 pr-md0 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addFriendModal"><i class="bi bi-plus-circle mr2 mr-md0"></i><span class="d-none d-md-block">新劇友</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 劇友邀請modal開始 -->
+                <div class="modal fade" id="friendInviteModal" tabindex="-1" aria-labelledby="friendInviteModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-gray-600 border broder-white mt8 mx-auto">
+                            <div class="modal-header position-relative">
+                                <h6 class="modal-title text-primary fz-sm4" id="friendInviteModalLabel">邀請你成為劇友</h6>
+                                <button type="button" class="btn-close modal-btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle text-white fz-6 bg-gray-600 "></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3 pb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-4-d65cfd16.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>卡斯伯</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">巨型娃娃</i><i class="text-gray-400">魷魚遊戲</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill mr2 mr-sm0 mb-sm1">同意</a>
+                                        <a href="#" class="btn btn-sm btn-outline-danger rounded-pill">婉拒</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3 pb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-1-82d9f21c.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>安東尼</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">浩克</i><i class="text-gray-400">復仇者聯盟</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill mr2 mr-sm0 mb-sm1">同意</a>
+                                        <a href="#" class="btn btn-sm btn-outline-danger rounded-pill">婉拒</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 劇友邀請modal結束 -->
+                <!-- +新劇友modal開始 -->
+                <div class="modal fade" id="addFriendModal" tabindex="-1" aria-labelledby="addFriendModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-gray-600 border broder-white mt8 mx-auto">
+                            <div class="modal-header position-relative">
+                                <h6 class="modal-title text-primary fz-sm4" id="addFriendModalLabel">找新劇友</h6>
+                                <button type="button" class="btn-close modal-btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle text-white fz-6 bg-gray-600 "></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="search d-flex ms-auto position-relative mb6">
+                                    <input class="form-control" type="search" placeholder="用戶暱稱 / ID" aria-label="Search">
+                                    <a href="#" class="search-btn p0 position-absolute text-dark" type="submit"><i class="bi bi-search"></i></a>
+                                </form>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3 pb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-7-630f5717.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>凱凱</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">五條悟</i><i class="text-gray-400">咒術迴戰</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mr2 mr-sm0 mb-sm1">＋劇友</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3 pb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-5-f18c0f40.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>Eric先生</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">五條悟</i><i class="text-gray-400">咒術迴戰</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-primary rounded-pill mr2 mr-sm0 mb-sm1">✓ 劇友</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- +新劇友modal結束 -->
+            </section>
+
+            <section class="sec2 mb20 mb-md10">
+                <div class="container">
+                    <div class="d-flex flex-column flex-md-row align-items-md-center mb6">
+                        <span class="fz-5 fz-md4 mb-md2"><i class="bi bi-people mr2 fz-6"></i>劇友數：<span class="text-primary">4</span></span>
+                        <form class="search d-flex ms-auto position-relative">
+                            <input class="form-control" type="search" placeholder="劇友暱稱 / ID" aria-label="Search">
+                            <a href="#" class="search-btn p0 position-absolute text-gray-200" type="submit"><i class="bi bi-search text-gray-200"></i></a>
+                        </form>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-6">
+                            <div class="bg-gray-500 p6 rounded">
+                                <div class="d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-6-ecec060b.png" alt="avatar" class="mr4">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-5">
+                                                <span>嚼勁先生</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span><i class="text-gray-300 mr4">阿成</i><i class="text-gray-400">當男人戀愛時</i></span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary rounded-pill">主頁</a>
+                                </div>
+                                <div class="bg-gray-600 rounded-pill pl8 pl-sm0 py2 d-flex flex-column flex-sm-row align-items-center">
+                                    <span class="fz-mini text-gray-300 mr6 mb-sm2">我正在追</span>
+                                    <ul class="follow d-flex align-items-center">
+                                        <li><a href="#">墨雨雲間</a></li>
+                                        <li><a href="#">度華年</a></li>
+                                        <li><a href="#">無聲蛙鳴</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="bg-gray-500 p6 rounded">
+                                <div class="d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-2-a5c0db53.png" alt="avatar" class="mr4">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-5">
+                                                <span>安小姐</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span><i class="text-gray-300 mr4">劉娜比</i><i class="text-gray-400">無法抗拒的他</i></span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary rounded-pill">主頁</a>
+                                </div>
+                                <div class="bg-gray-600 rounded-pill pl8 pl-sm0 py2 d-flex flex-column flex-sm-row align-items-center">
+                                    <span class="fz-mini text-gray-300 mr6 mb-sm2">我正在追</span>
+                                    <ul class="follow d-flex align-items-center">
+                                        <li><a href="#">毒梟</a></li>
+                                        <li><a href="#">女傭浮生錄</a></li>
+                                        <li><a href="#">戀愛修課</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="bg-gray-500 p6 rounded">
+                                <div class="d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-3-13c5037d.png" alt="avatar" class="mr4">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-5">
+                                                <span>于小姐</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span><i class="text-gray-300 mr4">薛芳菲</i><i class="text-gray-400">墨雨雲間</i></span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary rounded-pill">主頁</a>
+                                </div>
+                                <div class="bg-gray-600 rounded-pill pl8 pl-sm0 py2 d-flex flex-column flex-sm-row align-items-center">
+                                    <span class="fz-mini text-gray-300 mr6 mb-sm2">我正在追</span>
+                                    <ul class="follow d-flex align-items-center">
+                                        <li><a href="#">后翼棄兵</a></li>
+                                        <li><a href="#">鬼入侵</a></li>
+                                        <li><a href="#">First Love 初戀</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="bg-gray-500 p6 rounded">
+                                <div class="d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-5-f18c0f40.png" alt="avatar" class="mr4">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-5">
+                                                <span>Eric先生</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span><i class="text-gray-300 mr4">五條悟</i><i class="text-gray-400">咒術迴戰</i></span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary rounded-pill">主頁</a>
+                                </div>
+                                <div class="bg-gray-600 rounded-pill pl8 pl-sm0 py2 d-flex flex-column flex-sm-row align-items-center">
+                                    <span class="fz-mini text-gray-300 mr6 mb-sm2">我正在追</span>
+                                    <ul class="follow d-flex align-items-center">
+                                        <li><a href="#">魷魚遊戲</a></li>
+                                        <li><a href="#">D.P：逃兵追緝令</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+  <div class="container d-flex flex-lg-row flex-column flex-wrap justify-content-lg-between align-items-center py10 py-lg6 text-sm-center">
+    <div class="col-md-4 align-items-center">
+        <a href="#" class="mb-3 me-2 text-muted text-decoration-none lh-1 d-none d-lg-block">
+          <img src="data:image/png;base64,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" alt="我與劇中主角相會時">
+        </a>        
+        <a href="#" class="pb-3  text-muted text-decoration-none lh-1 d-block d-lg-none text-center">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAAYCAYAAADUK6vNAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA9USURBVHgB7V3beds4E4Wy2udoKwi3glUqWKqCOM+52K4gcQWWK7Bdge1cnqNUELoCyxWEqeBXXuMk+s+BZpQxDZKSbYFUVuf7ZIIkQAMgMDOYGQw7bkGcnJwk3W63P51Okx8/foz//PPPJ0j3f/78eb69vT10LQHqmaKe/yJ5iV/a6XRYz48vXrx47dYAb9++TXH4xPT3798Hu7u72aJl371795lHvJPjly9fHrmGgbZsof8PmcYxffbs2Re3BpB3sM80xs4Z+vLUtRQyL9nHPZ5jzDzFmJm4loN9jDFxwnRobKBdvT/++GMH/d+reg7G+inam7sGgDa8woFjPKnLi3bkeDcHy8znpoH2fUDbSOMzzIHdUJ4u/+Bl9TEIE3lZPR5R8BF+PPb1OvPi3OHF7pJ5uBmBznn97Oxs6B/Y7Y4wGMYuEnSgoR5kGqnWE40+YPrBgwds18NiOTuADSbIOwKzOXAtAJj0Iep5gxigfgNptyfOYOgcmDmZO8/rJl0sSD0Spjlu1gWY6GP0bV/GPy+dupYCY2Qf/bwlpyP8+hgboax5U4S2DDpeQ2MD7brg/bpxg/m9//79+8cxaQ6B/7kPGjNkGscJ6lHKtKWdXgBHuUHsuoqQsa39TbC+V1dXxzVjoifvICnL4BkIXtYH+7LsS8N1npM48TfG7ws5EitkH4QJ5yuIeyQa0aR9Eln83x1zKcPvEvUYoZN8PXDsK4NTkEiQaQYe2X/z5s2XlkidJGC9ins7kj7DL3cb3AsowWO8nKF/KWGmnIBtI74ExulOYexvYUxvleVHOwbrIAFz5WqI3THpTknWQ84PzPUdF5HmWOYBjCHADUAvShkIxw/o4ycSYpS7gKZg5/nz52cuEkAjPxWZMek6rm+hbo853lnHikf0AvcnLNeVh32klE7mgH/CjiBH3ZeXmKGxg+ITjWT8F/+gE88p7SP5j4sInUBcceB3ZJfvoAGap08mYsuReUASuCbeoE0XODAfVzOnLgK4knCyaiJQz4doh0+zTejXrFCk9eqJNoP9jXf/oS4fJzsnGcEJiLGRu3ocY3U4chHACa3qQdRzgnSQyFoJkqsqNxOwWg3RgPg05sNhmeoT74RCbBrSMKwKYNqHmJfKrDLSTgqqSmvKgPbsIe+hjKtTPOevGGpmjpMAM2b/HurKCL+xMpmSx1BD9blwLcNv4BlIyD4ALrnvKoBO/IqOY8f4l4djhoN/oZyksfWwXCWV/U90zDnuD+21kkEZtc6iOqS9Y85AlHkQVLHh/rUybCckoKffvn1rnJEUmV8ROjYI1Pdv5C/VR0SU8FnftC6TMg9JJ05UcTVlokiVJAoy4X3fYx4eQMgLEiPaxdgWahAgjERhbiFwrKOe89URVeTaxxjzeyDAE7meuxZC1EDUDaZy6Qx0cwdMjCuLtK482rrLlYquREjAUfZhTHU5tC4jXYHifx/K5Z7Uj4wld9fr7NW4IQFFz7vunsDBSX0s0+gkDpRTFxEkVoVlliWwn/GismKZOgK4aqjxk5PbiWQo0mLKNCWVQhH2K5fBVK00aqcRA+LQLdh/wihLAUKX83kRlvYcF4O6TDJ5dJIdu5l9oRJ0LnErhmEeCc+5St3e3g4yD74jzQfiTceK3DUEsSnNhVLLoIFXFEYFWSxGvCjEqeKVnGb4nYOeDHkCoryHsV07Bzg2RFU0ME4PKVYiX9vg8IL2PC1eI3N0Mzv3mHbXULm7MJCcf3R5LNL/3645HOHFzF+EGNE9E6H6it5Zcou6u7FcP8Jv2zUEVZNwwqAeY9SZUtp8clGlqHnpbUIjnJup2BqFMGrf15ROygyItIepDadKsiSRE0LHZ66UeMg4zeryYfLM05TOMMlry6waReZBoO//lYkeQqoJlHmCfE8K9ylZ5gsYU+8MqmLpfGPqw7GuRPk1zr8yISr0xoS6EET45M97eaIdCe1Per/ADIOQMnp6RhtsG+1qy6IrS9ykeMN0SoqBV9pDLFt2f1k31LuAUrwlUkzLOaWwvpWAUd9MOCrvZ+YZ/Qqj9UoBYrtFZmYHI+1Q5r5KZmR+565BFJwPStUnMslKXTUVUF8cCTHpQT33aF3cfWMDRCgFIT5ThxW5nC5YPJhPjaluxcKfEMtTFeQwhnjuGQje/YgqTsmXWeJs1VtFWDtVDIBWXoj36Z2B9k+a8Mi6b3SF8N64YVxCgxLmotJlRByAKZwWL2IwUuqhUdxJfTlZaKfpF/ev6JLNNQAa5ujZQSKh7sXo98fG1jGxUnCN10RM3Ict5j6e8duDnoFUuxrBYkQjbiivCCOpm7mm74XyiO7eM6MYjFvsCCrIDUw9/HWhI0VGZtVb1xCTeVCNZZhHqWeY2dtyyj1yJY/bZ5shDAzdjB41CtDI19wvF7il7e2HVrlsX7dMt6UrE+q/SrywUicb3jot3STGOqKRbMO5TL7EuDm2apksqhXqSEdirOMLurBGdFGrPI3l6bNBK2EdLi4hBJ2GMkFqT8XJZRISrAiqVHA/ugpXtgUsmv2Y+yxCNworsZXCusHSMwyC3VdhenQjPlC3f8xRnbvn5tqF5PMbfPluxJAezXusCqJ5SSuyBB1P+B5vbQOBeipX4obOpCvvF9XR8lrs3dB8IcbOQeSoQyrSWuYCRn2R4hNzqXGmQkaCAfeUOuvQffTphnlssJZQ1Se1GqH7IWZAYg0GWObGS81C4hqAzFNuf9gXJnwayifqOG7Gdk16wRHo/33U54bAoNoPtzwmSzMQCRXSAwPJ9Jr4l49lV2zCaw101j47SE/EiF4JDM5hk0Z0C25OQp8lTFdJZxgAlHDOA/tDNviPAfPuCcbDo9A9GtfFQaMnY+YGqnYYrxjXGIh4Ia4dQAOP8A5eUXonXQzZe2U/HZNzRwXu9XLNIA2ZK1T7UVXQRu64urp6qo5ICzEQdg5jXyG5JR4zjD8zwsCcaLgTrSD/UP/XgIdBZgeiejVVFeDelel1ar3VoBE9XcSfnJAqZ26DW6PMeSQEThxVTZSBm2hjq3FF9dAvuadJG7GgUagaiB5XnZIQJbTFQDhybYO182KujjF+PMHVfubmVF7Tc7qAcy+dGWPbOH8iZRI5fnQRQaFa29G5GcapFqYtcxoZZCA01ImRnKdccaRmQGa4/lEqkbvZ8iyxPufgUNH3KEwDQe+ga6xkIJJ/XgZtSFxDRnQGwcOhJ8t8rwaUzV8hG1XrXB03aAT3YkR3kaAMJOR0I3aRxLUUdOUFfSBde2KFTI3cYc5zW66irWex93/Qk9NsJJwzENkMmdSVLzJLn+YfidVCewHDkKQBVzW/ZZ9qKbuyoKGIeywYyBC/f6azuFmNRcdcZ8gmIzLtE31R9H4TSYFuxwca/VOKHLsNbo3nz59Xuq1aJxHuIm5jRN41NKIn/BPy/FS7CN15QYvm1+nezs12Jc+LKkTJ5sGh+80g7tDJEkV8wF0mupgo/3O/trM7OWpYAV7Pyjy1zPZ2/8CphCx2kWBdWQM70akjfiht6okHVmLuJWWusGx37HAsxU1ilFLEg8x7QIgH1pB/JO7XuBjmJBbwjif6v0mAQKySUD4KFZqu8ucXbxqfpneL22AhdFoa9qMMYGjeXlNSb17rc14Wrh91WhTJuRg+/zaYtuwTARSmClE5JkXaV/aZCVKBnhArXvDGWa4gREdc2UnMa4lY7HAJhQBf13aiE0btdiMYWCjOlMGWhCeoDXlxF6iakIwOxy3ZJMZgipfipDDRsNbul+Qz4f6VJveB0IDGzZhupu6jpJsuUGwRf/7jdfiWRVtA5g3p/N/QvTYa0XXjnxVAFBpbT9Rcubk1KvPacg3YLGuCDi4EMbrnLYuMzM9DXEh/TiRKb15XqIuX+ddtJ62E1vCYzj7aFFWn51ZoSO6URDe95//hBz8Yx1fGMyJTwCTyLxEvs8z+0QrbB202jHlWNZlEJTpXuZX580veLBSvbIMbsO8/LZPO22ZEp4RrxgrnVlFNnvMPgyw6E9SPkW4rovEmLqLN0ka2lRhkwyWK6+rFC7IidGWuJSCzgKBB7ZFfXcletFoBuntb5iF7LuaSjRCLqAip1rjDXNyKNYBZkBHIztJE8mWx7TayZPSgxFWMsIpru7IS1Gxjkc58uA+oehpVYci4Oa3KQx94rqyYrvLn32Bx2MB91qvmNohpRDfC5kT2ULhCXXI50imn0VA9iwA05pENufI7gEZ9iZeW8gfacwj11l5VmVsp0cWY61cb01moXy9dlPlCx4IQ4Q/iapy7Cg4qGyG9Tg9lcv2wiouHRBNgYKzLjqgROYk+FqVxtOe4M/vAUR/56YfN/l9p/KIN2gdx3fVpfjStTEBaBDGN6KbewfpS2KNaS2iJaztQx502rOyWgW4krFL7iWbhQtSNr/ndp6qQ80sxEPmM6r6Tr3+pm6nqziRMSOYaAo1b0wXDV8uSba8jH1aRjwyt1OZhUQgBPdHw0BL2wHN/9OvA+sTTNiJeb5QSYqsLN2gBpiakxl2YR2xQQyGM4bIki+6rSNwauKjXxLqqKrf0/ou7gHRO3I9Jt4sqz3FR4Bdv0Mdu0c80uAVB1RAk9RPj4us/5Vj4/Oc28h014cYrn5n06hK+3LIIsRayZKMR0gdYBNE+QbldFwESZsWnlRDwa2dOwh5QPYG6kMnNv87W+fXRrr5RgRWPG/zGoHFckpm7I6iGsR8wWyVIbDGuv0BwGoXuk2aAjHhJ1xK5qg+RqVG+CVCYu40nVd2G1FWAwimdXqy9kirDMpvjIjvTFXMGYt20CPNiLuXevnhDZM58UIXgp2Q1HDeNRKrfFEK+coJc/Ebx1dXV3qJlsWTbFfdeEu4d2hxYftXqLGMzGpMZ2G+7k3mQuVgXa0z2MSZTLsYtRmR9zd32SH8IPHttJNPYuE3E5UV2oku+vG5/yV0gnncqwF0uU7Y4vwllHtQkrHoX/SLEVo3SqukQrcansvyGRsWymUxUZS87zV8tU9h6tcaeo7dxUMGYGbrZymUOjhW7anlQ+AejjnxHQ4xaGeO98B4N1uY3tA+VFQd3Uo9N+fGqd6RzoHHVYJkHdXjLEH/mZRmxmXjdJl1nI7jJJtpPTE9n3/oYoC6PZSJl3AQmefb43QBpF9VsA35gSqLy2j73eTfRen9P0E5m5+YSRXV+F8dKzufQpuYig668pg7XwHFOJxI3mwN52c/N2rMXa08F6yWekePOLZwX7HxehzlK2l83Vv4P7S/lnfOrVGkAAAAASUVORK5CYII=" alt="我與劇中主角相會時" class="w-50 d-inline-flex">
+        </a>        
+      </div>
+  
+      <div class="col-lg-5 clo-10 d-flex flex-lg-row flex-column align-items-center justify-content-lg-between justify-content-center fz-5">
+          <ul class="nav list-unstyled d-flex my-md5">
+              <li class="mr17"><a class="link-light fz-md5" href="#">聯絡我們</a></li>
+              <li class="ms-3"><a class="link-light fz-md5" href="#">幫助中心</a></li>
+            </ul>
+            <span class="text-gray-400 fz-mt5">© copyright</span>
+      </div>
+  </div>
+  </footer>
+        
+    </body>
+</html>
