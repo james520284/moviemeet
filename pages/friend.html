@@ -9,9 +9,9 @@
     <body>
         <%- include('./layout/header'); -%>
         <main class="friend-main">
-            <section class="sec1 py16 pt-sm6 pb-sm10">
+            <section class="sec1">
                 <div class="container">
-                    <div class="d-flex align-items-lg-center">
+                    <div class="d-flex align-items-lg-center mb6 mb-md2">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb ">
                                 <li class="breadcrumb-item"><a href="index.html" class="text-gray-400">首頁&nbsp;</a></li>
@@ -25,7 +25,7 @@
 
             <section class="sec2 mb20 mb-md10">
                 <div class="container">
-                    <div class="d-flex flex-column flex-md-row align-items-md-center mb6">
+                    <div class="d-flex align-items-md-center mb6">
                         <div class="d-flex align-items-center">
                             <!-- 劇友邀請 Button trigger modal -->
                             <a href="#" class="invite-btn fz-6 fz-sm5 pr3 mr8 mr-md1 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#friendInviteModal">
@@ -36,7 +36,7 @@
                                 <span class="d-none d-md-block">劇友邀請</span>
                             </a>
                             <!-- +新劇友 Button trigger modal -->
-                            <a href="#" class="add-btn fz-6 fz-sm5 pr-md0 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addFriendModal"><i class="bi bi-plus-circle mr2 mr-md0"></i><span class="d-none d-md-block">新劇友</span></a>
+                            <a href="#" class="add-btn fz-6 fz-sm5 pr-md0 mr8 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addFriendModal"><i class="bi bi-plus-circle mr2 mr-md0"></i><span class="d-none d-md-block">新劇友</span></a>
                         </div>
                         <form class="search search-oldFriends d-flex ms-auto position-relative">
                             <input class="form-control" type="search" placeholder="劇友暱稱 / ID" aria-label="Search">

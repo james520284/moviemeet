@@ -97,12 +97,12 @@
                 color: $gray-400;
             }
         }
-
         @include rwd-md-max {
-            .search {
+            .search-oldFriends{
                 width: 100%;
             }
         }
+        
         @include rwd-sm-max {
             .modal-content {
                 max-width: 320px;

@@ -1652,7 +1652,7 @@ $breadcrumb-font-size:              null !default;
 $breadcrumb-padding-y:              0 !default;
 $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         .5rem !default;
-$breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-margin-bottom:          none; //1rem !default;
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          $gray-400; //var(--#{$prefix}secondary-color) !default;
 $breadcrumb-active-color:           $gray-300; //var(--#{$prefix}secondary-color) !default;
