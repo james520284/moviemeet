@@ -11,7 +11,7 @@
     </head>
     <body>
         <%- include('./layout/header'); -%>
-        <main class="dramaPost-main mt20">
+        <main class="dramaPost-main">
             <div class="container">
                 <div class="row gx-lg-5 gy-3">
                     <div class="col-lg-5">
@@ -26,10 +26,18 @@
                                         <input class="form-control" type="search" placeholder="#聊串編號" aria-label="Search">
                                         <a href="#" class="search-btn p0 position-absolute" type="submit"><i class="bi bi-search"></i></a>
                                     </form>
-                                    <div class="sort-btn p2 rounded d-flex">
-                                        <a href="#">
+                                    <div class="dropdown">
+                                        <a href="#" class="sort-btn p2 rounded" role="button" id="sortBtn" data-bs-toggle="dropdown" aria-expanded="false">
                                             <span class="material-symbols-outlined">instant_mix</span>
                                         </a>
+                                        <ul class="dropdown-menu dropdown-menu-end sort-dropdown-menu" aria-labelledby="sortBtn">
+                                            <li><a class="dropdown-item active" href="#">發布時間：新→舊</a></li>
+                                            <li><a class="dropdown-item" href="#">發布時間：舊→新</a></li>
+                                            <li><a class="dropdown-item" href="#">熱門貼文：高→低</a></li>
+                                            <li><a class="dropdown-item" href="#">熱門貼文：低→高</a></li>
+                                            <li><a class="dropdown-item" href="#">自己貼文：優先顯示</a></li>
+                                            <li><a class="dropdown-item" href="#">好友貼文：優先顯示</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +53,7 @@
                                     </li>
                                     <li class="d-flex align-items-center mb6">
                                         <i class="fi fi-ss-play mr1"></i>
-                                        <a href="#">劇曲列表</a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#musicModal">劇曲列表</a>
                                     </li>
                                     <li class="d-flex align-items-center">
                                         <i class="fi fi-ss-users-class mr1"></i>
@@ -85,9 +93,17 @@
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <div class="func mr5 mr-sm1">
-                                                <a href="#"><i class="bi bi-three-dots d-block"></i></a>
-                                                <span class="d-block text-gray-300">#1</span>
+                                            <div class="func mr5 mr-sm1 d">
+                                                <div class="dropdown">
+                                                    <a href="#" class="three-dots-btn border-0" role="button" id="three-dots-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots d-block"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end three-dots-dropdown-menu" aria-labelledby="three-dots-btn">
+                                                        <li><a class="dropdown-item" href="#">分享貼文</a></li>
+                                                        <li><a class="dropdown-item" href="#">檢舉貼文</a></li>
+                                                    </ul>
+                                                    <span class="d-block text-gray-300">#1</span>
+                                                </div>
                                             </div>
                                             <a href="#" class="like-btn-head text-center bg-gray-400 border-r1 text-gray-300">
                                                 <i class="bi bi-activity d-block fz-4"></i>
@@ -619,10 +635,58 @@
                     </div>
                 </div>
                 <!-- 聊串modal結束 -->
+                
+                <!-- 劇曲modal開始 -->
+                <div class="modal music-modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModal" aria-hidden="true">
+                    <div class="modal-dialog bg-gray-500 modal-fullscreen-md-down">
+                        <div class="modal-content music-modal-content border-0 border-r0 bg-gray-500  pt20 pb30 py-md6">
+                            <div class="modal-header justify-content-md-center align-items-center mb4 mb-md-12 position-relative">
+                                <h2 class="modal-title text-gray-100" id="musicModalLabel">劇曲列表</h2>
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fz-6 d-block"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row gx-lg-5 gy-5">
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">觀雪 (墨雨雲間片頭曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">王心凌</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/P61JzuzEitU?si=rph8CUu7c2937oa7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">活下去愛下去  (墨雨雲間片尾曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">鐘辰樂</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/n_Lrr99RTAY?si=zt3pd5SLL1OvUuuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">一世聰明 (墨雨雲間插曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">Faye詹雯婷</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/DFXJkbvIaIk?si=v0FHPf94t9tiz9Mx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">當歸 (墨雨雲間插曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">金潤吉、崔子格</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/Hnyb-PqAiNQ?si=mZ1N9gM0KQehRDwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">芳菲落盡梨花白 (墨雨雲間插曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">米靚</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/XXnm1_mUIbc?si=uHzrLsIbWN-rlmjq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">墨雨雲間 (墨雨雲間推廣曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">井朧、周旋</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/mFRldC0TxQ8?si=eTnY86JEmPGkxdA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 劇曲modal結束 -->
+
             </div>
         </main>
 
-        <%- include('./layout/footer'); -%>
 
         <script type="module" src="../main.js"></script>
     </body>

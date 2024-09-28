@@ -1,58 +1,17 @@
 .friend-main{
     .sec1 {
-        .btn-close {
-            opacity: 1;
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translate(4px, -8px);
-        }
-        .invite-alarm{
-            transform: translateX(-4px);
-        }
-        .invite-item{
-            border-bottom: 1px solid $gray-500;
-        }
-
-        .avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 100px;
-
-            img {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                border-radius: 100px;
-            }
-        }
-        .add-btn {
-            transition: .5s;
-            &:hover {
-                color: $primary;
-            }
-        }
         
-        .search-btn {
-            top: 20%;
-            right: 5%;
-            
-        }
-
-
-        @include rwd-sm-max {
-            .modal-content {
-                max-width: 320px;
-            }
-        }
     }
     .sec2{
-        .search{
+        .search-oldFriends{
             width: 25%;
             .form-control {
                 color: $gray-400;
                 padding:10px 8px;
                 background-color: transparent;
+                &::-webkit-search-cancel-button {
+                    display: none;
+                }
             }
             &-btn {
                 top: 20%;
@@ -86,9 +45,67 @@
         .follow li+li{
             margin-left: 12px;
         }
+        .btn-close {
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(4px, -8px);
+        }
+        .invite-alarm {
+            transform: translateX(-4px);
+        }
+
+        .invite-item {
+            border-bottom: 1px solid $gray-500;
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 100px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 100px;
+            }
+        }
+
+        .add-btn {
+            transition: .5s;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+        .search-newFriends{
+            .form-control {
+                color: $gray-400;
+                padding: 10px 8px;
+                background-color: transparent;
+                &::-webkit-search-cancel-button {
+                    display: none;
+                }
+            }
+            &-btn {
+                top: 20%;
+                right: 5%;
+            }
+            ::placeholder {
+                color: $gray-400;
+            }
+        }
+
         @include rwd-md-max {
             .search {
                 width: 100%;
+            }
+        }
+        @include rwd-sm-max {
+            .modal-content {
+                max-width: 320px;
             }
         }
     }

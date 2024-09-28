@@ -16,6 +16,9 @@
             border: 1px solid $gray-400;
             padding: 8px 8px;
             background-color: transparent;
+            &::-webkit-search-cancel-button{
+                display: none;
+            }
         }
         &-btn {
             top: 20%;
@@ -24,12 +27,27 @@
         ::placeholder {
             color: $gray-400;
         }
+        
     }
     .sort-btn {
         border: 1px solid $gray-400;
         line-height: 0;
         &:hover{
             background-color: $gray-400;
+        }
+    }
+    .sort-dropdown-menu{
+        transform: translateY(52px) !important;
+        border: 1px solid $gray-400;
+        background-color:rgba($color: $gray-600, $alpha: .8) ;
+        .dropdown-item{
+            color: white;
+            &:hover{
+                color: $primary;
+            }
+            &.active{
+                color: $primary;
+            }
         }
     }
     .intro-slide{
@@ -106,6 +124,23 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
+        }
+    }
+    .three-dots-dropdown-menu {
+        min-width: none;
+        border: 1px solid $gray-400;
+        background-color: rgba($color: $gray-600, $alpha: .8);
+
+        .dropdown-item {
+            color: white;
+
+            &:hover {
+                color: $primary;
+            }
+
+            &.active {
+                color: $primary;
+            }
         }
     }
     .like-btn-head,
@@ -293,4 +328,26 @@
         }
     }
     // 聊串modal結束
+
+    // 劇曲modal開始
+
+    .music-modal{
+        .modal{
+            &-dialog {
+                max-width: 1600px;
+            }
+            &-content {
+                max-width: 1296px;
+            }
+            &-header {
+                border-bottom: 0;
+            }
+        }
+        .btn-close{
+            top: 36%;
+            right: 4%;
+            padding: 0;
+            margin: 0;
+        }
+    }
 }
