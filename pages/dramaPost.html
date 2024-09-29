@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="row gx-lg-5 gy-3">
                     <div class="col-lg-5">
-                        <div class="bg-gray-500 p6 border-r2">
+                        <div class="drama-intro bg-gray-500 p6 border-r2">
                             <div class="function d-flex flex-column  flex-sm-row align-items-sm-center mb4">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#chatModal" class="chat-btn py2 px5 text-gray-500 border-r1 d-flex justify-content-center align-items-center mr2 mr-sm0 mb-sm2">
                                     <span class="chat-ic material-symbols-outlined mr1">add_comment</span>
@@ -57,7 +57,7 @@
                                     </li>
                                     <li class="d-flex align-items-center">
                                         <i class="fi fi-ss-users-class mr1"></i>
-                                        <a href="#">劇友推坑</a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#shareFriendModal">劇友推坑</a>
                                     </li>
                                 </ul>
                                 <ul class="data text-whit pl9">
@@ -683,6 +683,89 @@
                     </div>
                 </div>
                 <!-- 劇曲modal結束 -->
+
+                <!-- 分享劇友modal開始 -->
+                <div class="modal fade" id="shareFriendModal" tabindex="-1" aria-labelledby="shareFriendModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-gray-600 border broder-white mt8 mx-auto">
+                            <div class="modal-header position-relative">
+                                <h6 class="modal-title text-primary fz-sm4" id="shareFriendModalLabel">分享劇友</h6>
+                                <button type="button" class="btn-close modal-btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle text-white fz-6 bg-gray-600 "></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex align-items-center mb6">
+                                    <form class="search d-flex  position-relative mr4">
+                                        <input class="form-control" type="search" placeholder="用戶暱稱 / ID" aria-label="Search">
+                                        <a href="#" class="search-btn p0 position-absolute" type="submit"><i class="bi bi-search text-gray-200"></i></a>
+                                    </form>
+                                    <ul class="social d-flex align-items-center ms-auto text-gray-300">
+                                        <li><a href="#"><i class="bi bi-line fz-6 mr4 "></i></a></li>
+                                        <li><a href="#"><i class="bi bi-facebook fz-6 "></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="../assets/images/avatar-6.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>嚼勁先生</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">阿成</i><i class="text-gray-400">當男人戀愛時</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="../assets/images/avatar-2.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>安小姐</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">劉娜比</i><i class="text-gray-400">無法抗拒的他</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="../assets/images/avatar-2.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>于小姐</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">薛芳菲</i><i class="text-gray-400">墨雨雲間</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="../assets/images/avatar-5.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>Eric先生</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">五條悟</i><i class="text-gray-400">咒術迴戰</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 分享劇友modal結束 -->
 
             </div>
         </main>
