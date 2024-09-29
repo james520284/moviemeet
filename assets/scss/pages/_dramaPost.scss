@@ -1,4 +1,9 @@
 .dramaPost-main{
+    .drama-intro{
+        position: sticky;
+        top: 5%;
+        left: 0;
+    }
     .chat-ic {
         transform: scaleX(-1);
     }
@@ -330,7 +335,6 @@
     // 聊串modal結束
 
     // 劇曲modal開始
-
     .music-modal{
         .modal{
             &-dialog {
@@ -348,6 +352,21 @@
             right: 4%;
             padding: 0;
             margin: 0;
+        }
+    }
+    // 劇曲modal結束
+
+    .avatar {
+        
+        width: 48px;
+        height: 48px;
+        border-radius: 100px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
         }
     }
 }
