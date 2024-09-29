@@ -8,8 +8,8 @@
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
         
         <title>我與劇中主角相會時</title>
-      <script type="module" crossorigin src="/moviemeet/assets/main-96d1959d.js"></script>
-      <link rel="stylesheet" href="/moviemeet/assets/main-438ebdd6.css">
+      <script type="module" crossorigin src="/moviemeet/assets/main-cc17c981.js"></script>
+      <link rel="stylesheet" href="/moviemeet/assets/main-ad236091.css">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark header-nav">
@@ -76,11 +76,11 @@
 
 
     </div>
-  </nav>        <main class="dramaPost-main mt20">
+  </nav>        <main class="dramaPost-main">
             <div class="container">
                 <div class="row gx-lg-5 gy-3">
                     <div class="col-lg-5">
-                        <div class="bg-gray-500 p6 border-r2">
+                        <div class="drama-intro bg-gray-500 p6 border-r2">
                             <div class="function d-flex flex-column  flex-sm-row align-items-sm-center mb4">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#chatModal" class="chat-btn py2 px5 text-gray-500 border-r1 d-flex justify-content-center align-items-center mr2 mr-sm0 mb-sm2">
                                     <span class="chat-ic material-symbols-outlined mr1">add_comment</span>
@@ -91,10 +91,18 @@
                                         <input class="form-control" type="search" placeholder="#聊串編號" aria-label="Search">
                                         <a href="#" class="search-btn p0 position-absolute" type="submit"><i class="bi bi-search"></i></a>
                                     </form>
-                                    <div class="sort-btn p2 rounded d-flex">
-                                        <a href="#">
+                                    <div class="dropdown">
+                                        <a href="#" class="sort-btn p2 rounded" role="button" id="sortBtn" data-bs-toggle="dropdown" aria-expanded="false">
                                             <span class="material-symbols-outlined">instant_mix</span>
                                         </a>
+                                        <ul class="dropdown-menu dropdown-menu-end sort-dropdown-menu" aria-labelledby="sortBtn">
+                                            <li><a class="dropdown-item active" href="#">發布時間：新→舊</a></li>
+                                            <li><a class="dropdown-item" href="#">發布時間：舊→新</a></li>
+                                            <li><a class="dropdown-item" href="#">熱門貼文：高→低</a></li>
+                                            <li><a class="dropdown-item" href="#">熱門貼文：低→高</a></li>
+                                            <li><a class="dropdown-item" href="#">自己貼文：優先顯示</a></li>
+                                            <li><a class="dropdown-item" href="#">好友貼文：優先顯示</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -110,11 +118,11 @@
                                     </li>
                                     <li class="d-flex align-items-center mb6">
                                         <i class="fi fi-ss-play mr1"></i>
-                                        <a href="#">劇曲列表</a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#musicModal">劇曲列表</a>
                                     </li>
                                     <li class="d-flex align-items-center">
                                         <i class="fi fi-ss-users-class mr1"></i>
-                                        <a href="#">劇友推坑</a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#shareFriendModal">劇友推坑</a>
                                     </li>
                                 </ul>
                                 <ul class="data text-whit pl9">
@@ -150,9 +158,17 @@
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <div class="func mr5 mr-sm1">
-                                                <a href="#"><i class="bi bi-three-dots d-block"></i></a>
-                                                <span class="d-block text-gray-300">#1</span>
+                                            <div class="func mr5 mr-sm1 d">
+                                                <div class="dropdown">
+                                                    <a href="#" class="three-dots-btn border-0" role="button" id="three-dots-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots d-block"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end three-dots-dropdown-menu" aria-labelledby="three-dots-btn">
+                                                        <li><a class="dropdown-item" href="#">分享貼文</a></li>
+                                                        <li><a class="dropdown-item" href="#">檢舉貼文</a></li>
+                                                    </ul>
+                                                    <span class="d-block text-gray-300">#1</span>
+                                                </div>
                                             </div>
                                             <a href="#" class="like-btn-head text-center bg-gray-400 border-r1 text-gray-300">
                                                 <i class="bi bi-activity d-block fz-4"></i>
@@ -684,29 +700,142 @@
                     </div>
                 </div>
                 <!-- 聊串modal結束 -->
+                
+                <!-- 劇曲modal開始 -->
+                <div class="modal music-modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModal" aria-hidden="true">
+                    <div class="modal-dialog bg-gray-500 modal-fullscreen-md-down">
+                        <div class="modal-content music-modal-content border-0 border-r0 bg-gray-500  pt20 pb30 py-md6">
+                            <div class="modal-header justify-content-md-center align-items-center mb4 mb-md-12 position-relative">
+                                <h2 class="modal-title text-gray-100" id="musicModalLabel">劇曲列表</h2>
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fz-6 d-block"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row gx-lg-5 gy-5">
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">觀雪 (墨雨雲間片頭曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">王心凌</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/P61JzuzEitU?si=rph8CUu7c2937oa7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">活下去愛下去  (墨雨雲間片尾曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">鐘辰樂</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/n_Lrr99RTAY?si=zt3pd5SLL1OvUuuC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">一世聰明 (墨雨雲間插曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">Faye詹雯婷</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/DFXJkbvIaIk?si=v0FHPf94t9tiz9Mx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">當歸 (墨雨雲間插曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">金潤吉、崔子格</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/Hnyb-PqAiNQ?si=mZ1N9gM0KQehRDwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">芳菲落盡梨花白 (墨雨雲間插曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">米靚</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/XXnm1_mUIbc?si=uHzrLsIbWN-rlmjq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h3 class="fz-5 text-gray-100 fz-md4">墨雨雲間 (墨雨雲間推廣曲)</h3>
+                                        <span class="fz-4 text-gray-300 mb3">井朧、周旋</span>
+                                        <iframe class="d-block w-100" max-width="560" height="315" src="https://www.youtube.com/embed/mFRldC0TxQ8?si=eTnY86JEmPGkxdA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 劇曲modal結束 -->
+
+                <!-- 分享劇友modal開始 -->
+                <div class="modal fade" id="shareFriendModal" tabindex="-1" aria-labelledby="shareFriendModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-gray-600 border broder-white mt8 mx-auto">
+                            <div class="modal-header position-relative">
+                                <h6 class="modal-title text-primary fz-sm4" id="shareFriendModalLabel">分享劇友</h6>
+                                <button type="button" class="btn-close modal-btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle text-white fz-6 bg-gray-600 "></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex align-items-center mb6">
+                                    <form class="search d-flex  position-relative mr4">
+                                        <input class="form-control" type="search" placeholder="用戶暱稱 / ID" aria-label="Search">
+                                        <a href="#" class="search-btn p0 position-absolute" type="submit"><i class="bi bi-search text-gray-200"></i></a>
+                                    </form>
+                                    <ul class="social d-flex align-items-center ms-auto text-gray-300">
+                                        <li><a href="#"><i class="bi bi-line fz-6 mr4 "></i></a></li>
+                                        <li><a href="#"><i class="bi bi-facebook fz-6 "></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-6-ecec060b.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>嚼勁先生</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">阿成</i><i class="text-gray-400">當男人戀愛時</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-2-a5c0db53.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>安小姐</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">劉娜比</i><i class="text-gray-400">無法抗拒的他</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-2-a5c0db53.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>于小姐</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">薛芳菲</i><i class="text-gray-400">墨雨雲間</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                <div class="invite-item d-flex justify-content-between align-items-center mb3">
+                                    <div class="avatar d-flex align-items-center">
+                                        <img src="/moviemeet/assets/avatar-5-f18c0f40.png" alt="avatar" class="mr2">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center fz-4">
+                                                <span>Eric先生</span><span class="text-gray-300">&nbsp; cos</span>
+                                            </div>
+                                            <span class="fz-mini"><i class="text-gray-300 mr4">五條悟</i><i class="text-gray-400">咒術迴戰</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mb-sm1">分享</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 分享劇友modal結束 -->
+
             </div>
         </main>
 
-        <footer>
-  <div class="container d-flex flex-lg-row flex-column flex-wrap justify-content-lg-between align-items-center py10 py-lg6 text-sm-center">
-    <div class="col-md-4 align-items-center">
-        <a href="#" class="mb-3 me-2 text-muted text-decoration-none lh-1 d-none d-lg-block">
-          <img src="data:image/png;base64,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" alt="我與劇中主角相會時">
-        </a>        
-        <a href="#" class="pb-3  text-muted text-decoration-none lh-1 d-block d-lg-none text-center">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAAYCAYAAADUK6vNAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA9USURBVHgB7V3beds4E4Wy2udoKwi3glUqWKqCOM+52K4gcQWWK7Bdge1cnqNUELoCyxWEqeBXXuMk+s+BZpQxDZKSbYFUVuf7ZIIkQAMgMDOYGQw7bkGcnJwk3W63P51Okx8/foz//PPPJ0j3f/78eb69vT10LQHqmaKe/yJ5iV/a6XRYz48vXrx47dYAb9++TXH4xPT3798Hu7u72aJl371795lHvJPjly9fHrmGgbZsof8PmcYxffbs2Re3BpB3sM80xs4Z+vLUtRQyL9nHPZ5jzDzFmJm4loN9jDFxwnRobKBdvT/++GMH/d+reg7G+inam7sGgDa8woFjPKnLi3bkeDcHy8znpoH2fUDbSOMzzIHdUJ4u/+Bl9TEIE3lZPR5R8BF+PPb1OvPi3OHF7pJ5uBmBznn97Oxs6B/Y7Y4wGMYuEnSgoR5kGqnWE40+YPrBgwds18NiOTuADSbIOwKzOXAtAJj0Iep5gxigfgNptyfOYOgcmDmZO8/rJl0sSD0Spjlu1gWY6GP0bV/GPy+dupYCY2Qf/bwlpyP8+hgboax5U4S2DDpeQ2MD7brg/bpxg/m9//79+8cxaQ6B/7kPGjNkGscJ6lHKtKWdXgBHuUHsuoqQsa39TbC+V1dXxzVjoifvICnL4BkIXtYH+7LsS8N1npM48TfG7ws5EitkH4QJ5yuIeyQa0aR9Eln83x1zKcPvEvUYoZN8PXDsK4NTkEiQaQYe2X/z5s2XlkidJGC9ins7kj7DL3cb3AsowWO8nKF/KWGmnIBtI74ExulOYexvYUxvleVHOwbrIAFz5WqI3THpTknWQ84PzPUdF5HmWOYBjCHADUAvShkIxw/o4ycSYpS7gKZg5/nz52cuEkAjPxWZMek6rm+hbo853lnHikf0AvcnLNeVh32klE7mgH/CjiBH3ZeXmKGxg+ITjWT8F/+gE88p7SP5j4sInUBcceB3ZJfvoAGap08mYsuReUASuCbeoE0XODAfVzOnLgK4knCyaiJQz4doh0+zTejXrFCk9eqJNoP9jXf/oS4fJzsnGcEJiLGRu3ocY3U4chHACa3qQdRzgnSQyFoJkqsqNxOwWg3RgPg05sNhmeoT74RCbBrSMKwKYNqHmJfKrDLSTgqqSmvKgPbsIe+hjKtTPOevGGpmjpMAM2b/HurKCL+xMpmSx1BD9blwLcNv4BlIyD4ALrnvKoBO/IqOY8f4l4djhoN/oZyksfWwXCWV/U90zDnuD+21kkEZtc6iOqS9Y85AlHkQVLHh/rUybCckoKffvn1rnJEUmV8ROjYI1Pdv5C/VR0SU8FnftC6TMg9JJ05UcTVlokiVJAoy4X3fYx4eQMgLEiPaxdgWahAgjERhbiFwrKOe89URVeTaxxjzeyDAE7meuxZC1EDUDaZy6Qx0cwdMjCuLtK482rrLlYquREjAUfZhTHU5tC4jXYHifx/K5Z7Uj4wld9fr7NW4IQFFz7vunsDBSX0s0+gkDpRTFxEkVoVlliWwn/GismKZOgK4aqjxk5PbiWQo0mLKNCWVQhH2K5fBVK00aqcRA+LQLdh/wihLAUKX83kRlvYcF4O6TDJ5dJIdu5l9oRJ0LnErhmEeCc+5St3e3g4yD74jzQfiTceK3DUEsSnNhVLLoIFXFEYFWSxGvCjEqeKVnGb4nYOeDHkCoryHsV07Bzg2RFU0ME4PKVYiX9vg8IL2PC1eI3N0Mzv3mHbXULm7MJCcf3R5LNL/3645HOHFzF+EGNE9E6H6it5Zcou6u7FcP8Jv2zUEVZNwwqAeY9SZUtp8clGlqHnpbUIjnJup2BqFMGrf15ROygyItIepDadKsiSRE0LHZ66UeMg4zeryYfLM05TOMMlry6waReZBoO//lYkeQqoJlHmCfE8K9ylZ5gsYU+8MqmLpfGPqw7GuRPk1zr8yISr0xoS6EET45M97eaIdCe1Per/ADIOQMnp6RhtsG+1qy6IrS9ykeMN0SoqBV9pDLFt2f1k31LuAUrwlUkzLOaWwvpWAUd9MOCrvZ+YZ/Qqj9UoBYrtFZmYHI+1Q5r5KZmR+565BFJwPStUnMslKXTUVUF8cCTHpQT33aF3cfWMDRCgFIT5ThxW5nC5YPJhPjaluxcKfEMtTFeQwhnjuGQje/YgqTsmXWeJs1VtFWDtVDIBWXoj36Z2B9k+a8Mi6b3SF8N64YVxCgxLmotJlRByAKZwWL2IwUuqhUdxJfTlZaKfpF/ev6JLNNQAa5ujZQSKh7sXo98fG1jGxUnCN10RM3Ict5j6e8duDnoFUuxrBYkQjbiivCCOpm7mm74XyiO7eM6MYjFvsCCrIDUw9/HWhI0VGZtVb1xCTeVCNZZhHqWeY2dtyyj1yJY/bZ5shDAzdjB41CtDI19wvF7il7e2HVrlsX7dMt6UrE+q/SrywUicb3jot3STGOqKRbMO5TL7EuDm2apksqhXqSEdirOMLurBGdFGrPI3l6bNBK2EdLi4hBJ2GMkFqT8XJZRISrAiqVHA/ugpXtgUsmv2Y+yxCNworsZXCusHSMwyC3VdhenQjPlC3f8xRnbvn5tqF5PMbfPluxJAezXusCqJ5SSuyBB1P+B5vbQOBeipX4obOpCvvF9XR8lrs3dB8IcbOQeSoQyrSWuYCRn2R4hNzqXGmQkaCAfeUOuvQffTphnlssJZQ1Se1GqH7IWZAYg0GWObGS81C4hqAzFNuf9gXJnwayifqOG7Gdk16wRHo/33U54bAoNoPtzwmSzMQCRXSAwPJ9Jr4l49lV2zCaw101j47SE/EiF4JDM5hk0Z0C25OQp8lTFdJZxgAlHDOA/tDNviPAfPuCcbDo9A9GtfFQaMnY+YGqnYYrxjXGIh4Ia4dQAOP8A5eUXonXQzZe2U/HZNzRwXu9XLNIA2ZK1T7UVXQRu64urp6qo5ICzEQdg5jXyG5JR4zjD8zwsCcaLgTrSD/UP/XgIdBZgeiejVVFeDelel1ar3VoBE9XcSfnJAqZ26DW6PMeSQEThxVTZSBm2hjq3FF9dAvuadJG7GgUagaiB5XnZIQJbTFQDhybYO182KujjF+PMHVfubmVF7Tc7qAcy+dGWPbOH8iZRI5fnQRQaFa29G5GcapFqYtcxoZZCA01ImRnKdccaRmQGa4/lEqkbvZ8iyxPufgUNH3KEwDQe+ga6xkIJJ/XgZtSFxDRnQGwcOhJ8t8rwaUzV8hG1XrXB03aAT3YkR3kaAMJOR0I3aRxLUUdOUFfSBde2KFTI3cYc5zW66irWex93/Qk9NsJJwzENkMmdSVLzJLn+YfidVCewHDkKQBVzW/ZZ9qKbuyoKGIeywYyBC/f6azuFmNRcdcZ8gmIzLtE31R9H4TSYFuxwca/VOKHLsNbo3nz59Xuq1aJxHuIm5jRN41NKIn/BPy/FS7CN15QYvm1+nezs12Jc+LKkTJ5sGh+80g7tDJEkV8wF0mupgo/3O/trM7OWpYAV7Pyjy1zPZ2/8CphCx2kWBdWQM70akjfiht6okHVmLuJWWusGx37HAsxU1ilFLEg8x7QIgH1pB/JO7XuBjmJBbwjif6v0mAQKySUD4KFZqu8ucXbxqfpneL22AhdFoa9qMMYGjeXlNSb17rc14Wrh91WhTJuRg+/zaYtuwTARSmClE5JkXaV/aZCVKBnhArXvDGWa4gREdc2UnMa4lY7HAJhQBf13aiE0btdiMYWCjOlMGWhCeoDXlxF6iakIwOxy3ZJMZgipfipDDRsNbul+Qz4f6VJveB0IDGzZhupu6jpJsuUGwRf/7jdfiWRVtA5g3p/N/QvTYa0XXjnxVAFBpbT9Rcubk1KvPacg3YLGuCDi4EMbrnLYuMzM9DXEh/TiRKb15XqIuX+ddtJ62E1vCYzj7aFFWn51ZoSO6URDe95//hBz8Yx1fGMyJTwCTyLxEvs8z+0QrbB202jHlWNZlEJTpXuZX580veLBSvbIMbsO8/LZPO22ZEp4RrxgrnVlFNnvMPgyw6E9SPkW4rovEmLqLN0ka2lRhkwyWK6+rFC7IidGWuJSCzgKBB7ZFfXcletFoBuntb5iF7LuaSjRCLqAip1rjDXNyKNYBZkBHIztJE8mWx7TayZPSgxFWMsIpru7IS1Gxjkc58uA+oehpVYci4Oa3KQx94rqyYrvLn32Bx2MB91qvmNohpRDfC5kT2ULhCXXI50imn0VA9iwA05pENufI7gEZ9iZeW8gfacwj11l5VmVsp0cWY61cb01moXy9dlPlCx4IQ4Q/iapy7Cg4qGyG9Tg9lcv2wiouHRBNgYKzLjqgROYk+FqVxtOe4M/vAUR/56YfN/l9p/KIN2gdx3fVpfjStTEBaBDGN6KbewfpS2KNaS2iJaztQx502rOyWgW4krFL7iWbhQtSNr/ndp6qQ80sxEPmM6r6Tr3+pm6nqziRMSOYaAo1b0wXDV8uSba8jH1aRjwyt1OZhUQgBPdHw0BL2wHN/9OvA+sTTNiJeb5QSYqsLN2gBpiakxl2YR2xQQyGM4bIki+6rSNwauKjXxLqqKrf0/ou7gHRO3I9Jt4sqz3FR4Bdv0Mdu0c80uAVB1RAk9RPj4us/5Vj4/Oc28h014cYrn5n06hK+3LIIsRayZKMR0gdYBNE+QbldFwESZsWnlRDwa2dOwh5QPYG6kMnNv87W+fXRrr5RgRWPG/zGoHFckpm7I6iGsR8wWyVIbDGuv0BwGoXuk2aAjHhJ1xK5qg+RqVG+CVCYu40nVd2G1FWAwimdXqy9kirDMpvjIjvTFXMGYt20CPNiLuXevnhDZM58UIXgp2Q1HDeNRKrfFEK+coJc/Ebx1dXV3qJlsWTbFfdeEu4d2hxYftXqLGMzGpMZ2G+7k3mQuVgXa0z2MSZTLsYtRmR9zd32SH8IPHttJNPYuE3E5UV2oku+vG5/yV0gnncqwF0uU7Y4vwllHtQkrHoX/SLEVo3SqukQrcansvyGRsWymUxUZS87zV8tU9h6tcaeo7dxUMGYGbrZymUOjhW7anlQ+AejjnxHQ4xaGeO98B4N1uY3tA+VFQd3Uo9N+fGqd6RzoHHVYJkHdXjLEH/mZRmxmXjdJl1nI7jJJtpPTE9n3/oYoC6PZSJl3AQmefb43QBpF9VsA35gSqLy2j73eTfRen9P0E5m5+YSRXV+F8dKzufQpuYig668pg7XwHFOJxI3mwN52c/N2rMXa08F6yWekePOLZwX7HxehzlK2l83Vv4P7S/lnfOrVGkAAAAASUVORK5CYII=" alt="我與劇中主角相會時" class="w-50 d-inline-flex">
-        </a>        
-      </div>
-  
-      <div class="col-lg-5 clo-10 d-flex flex-lg-row flex-column align-items-center justify-content-lg-between justify-content-center fz-5">
-          <ul class="nav list-unstyled d-flex my-md5">
-              <li class="mr17"><a class="link-light fz-md5" href="#">聯絡我們</a></li>
-              <li class="ms-3"><a class="link-light fz-md5" href="#">幫助中心</a></li>
-            </ul>
-            <span class="text-gray-400 fz-mt5">© copyright</span>
-      </div>
-  </div>
-  </footer>
+
         
     </body>
 </html>
