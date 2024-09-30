@@ -1,0 +1,29 @@
+.login-main{
+    
+    .tab-area {
+        form ::placeholder{
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            max-width: 400px;
+        }
+    
+        .tab-input-area {
+            max-width: 400px;
+            margin: 0 auto;
+    
+            button {
+                color: $primary;
+                border: 1px solid $primary;
+                transition: .5s;
+            }
+    
+            button:hover {
+                background-color: $primary;
+                color: $gray-600;
+            }
+        }
+    }
+}

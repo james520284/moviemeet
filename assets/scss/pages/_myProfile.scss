@@ -1,0 +1,135 @@
+body {
+  min-width: 320px;
+}
+.profile-card {
+  border: 1px solid $gray-300;
+  border-radius: 10px;
+
+  img {
+    width: 240px;
+    height: 240px;
+  }
+  .profile-pic-container {
+    .set-btn {
+      width: 44px;
+      height: 44px;
+      bottom: 0;
+      right: 10px;
+      border: 2px solid $gray-300;
+      @include hover-transform(1.2);
+    }
+
+    .profile-pic {
+      object-position: 10% 20%;
+      border: 2px solid $gray-300;
+    }
+  }
+
+  .my-icon {
+    width: 28px;
+    height: 28px;
+    color: $primary;
+  }
+  .setting-btns {
+    border: 1px solid #444444;
+    border-radius: 3px;
+    @include hover-transform(1.05);
+    .my-setting-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .profile-card-links {
+    @include hover-transform(1.2);
+  }
+}
+
+.following-card {
+  border: 1px solid $gray-300;
+  border-radius: 10px;
+  .carousel-indicators {
+    position: absolute;
+    bottom: -48px;
+    .active {
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+    }
+    button {
+      background-color: $gray-300;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+  .carousel-inner {
+    .card {
+      @include hover-transform(1.05);
+      .img-object {
+        height: 109px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 0;
+      }
+      .card-body {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 8px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: white;
+      }
+    }
+  }
+}
+
+.my-collections {
+  border: 1px solid $gray-300;
+  border-radius: 10px;
+  .nav-tabs {
+    border-bottom: 1px solid $gray-300;
+    .nav-link {
+      background-color: transparent;
+      border: none;
+    }
+    .nav-link.active {
+      border-bottom: 3px solid $primary;
+      color: white;
+    }
+  }
+
+  .collection-cards {
+    .collection-card {
+      @include hover-transform(1.05);
+      .add-collection-btn {
+        width: 100%;
+        height: 134px;
+        border-radius: 0;
+      }
+      .img-object {
+        height: 134px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 0;
+      }
+
+      .card-body {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 8px;
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.btn-hover {
+  :hover {
+    transform: scale(1.2);
+  }
+}
