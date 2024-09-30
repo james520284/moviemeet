@@ -1192,8 +1192,8 @@ $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius:           var(--#{$prefix}border-radius) !default;
-$nav-pills-link-active-color:       $component-active-color !default;
-$nav-pills-link-active-bg:          $component-active-bg !default;
+$nav-pills-link-active-color:       $gray-600;//$component-active-color !default; moviemeet
+$nav-pills-link-active-bg:          $component-active-bg !default; 
 
 $nav-underline-gap:                 1rem !default;
 $nav-underline-border-width:        .125rem !default;
