@@ -214,6 +214,9 @@
         }
     }
     @include rwd-sm-max {
+        .post-content p {
+            font-size: 14px;
+        }
         .search{
             width: 100%;
         }
