@@ -1,0 +1,46 @@
+.dramainfo-main {
+  .banner-img {
+    width: 100%;
+  }
+
+  .drama-tag {
+    color: $primary;
+  }
+
+  .info-text {
+    color: $gray-300;
+  }
+
+  .info-list li {
+    border-color: transparent;
+    background: $gray-500;
+    padding: 8px 12px;
+  }
+
+  .hito-list-contact {
+    border: 1px solid $gray-300;
+    border-radius: 8px;
+    padding: 12px;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .avatar-mini {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .drama-plot {
+    border-color: transparent;
+    border-radius: 8px;
+    background: $gray-500;
+    padding: 8px 12px;
+  }
+}
