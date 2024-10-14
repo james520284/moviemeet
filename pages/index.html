@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Movie Meet</title>
   </head>
   <body>
@@ -12,10 +13,10 @@
 
    <main class="index-main"> 
     <section class="container-fluid banner">
-      <div class="container mb-4">
+      <div class="container mb15 mb-lg10 ">
        <!--banner文字-->  
-        <div class="py-5">
-          <div class="text-sm-center text-lg-start">
+        <div class="py5 py-lg0">
+          <div class="text-sm-center text-lg-start pt-lg7">
             <img src="../assets/images/deco/人氣聊串.png" alt="人氣聊串" class="mb-lg35">
           </div>
           <div class="post-text mb32 pl12 d-none d-lg-block"> 
@@ -141,7 +142,7 @@
         <div class="tag-title pt10 mb6">
           <h3 class="text-nowrap text-center">#熱門標籤</h3>
        </div>
-       <div class="container px3 pb10">
+       <div class="container px3 pb10 text-nowrap">
         <div class="row">
           <div class="col-5 mb3"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>大推特推</a></div>
           <div class="col-5"><a href="#" class="btn btn-gray-400 rounded-pill tagbtn-bg border-0 px6 py1" role="button"><i class="bi bi-hash"></i>電影</a></div>
@@ -181,104 +182,68 @@
    <!--排行榜-->
     <div class="ranking my10">
      <!--熱門-->
-      <div class="popular container my10 mb-lg0">
-        <div class="row gy-2">
-          <div class="col-lg-12">
-            <box class="d-flex align-items-center justify-content-center">
-              <h4 class="my7 fz-12 fw-normal">熱門</h4>
-              <img src="../assets/images/deco/001.png" alt="Rectangle" class="mx5">
-              <div>
-                <p class="fz-mini fw-lighter">Popular Rankings</p>
-                <h6 class="fw-light">聲量榜</h6>
-              </div>
-            </box>
-          </div>
-        </div>  
-       <!--電腦版-->
-       <div class="container d-none d-lg-block">
-        <div class="row">
-          <div class="col-lg-4 position-relative">
-            <div class="rankingcard">
-              <a href="dramaPost.html">
-                <picture>
-                  <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
-                  <img src="../assets/images/ranking/pop/pop-1.png" alt="pop-rankingcard1" class="pt20">
-                </picture>
-                <div class="number position-absolute top-0 start-0">
-                  <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
+      <div class="hotrank">
+        <div class="container">
+          <div class="rankswiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                 <!--1-->
+                <div class="swiper-slide">
+                  <div class="rankingcard position-relative">
+                      <picture>
+                        <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
+                        <img src="../assets/images/ranking/pop/pop-1.png" alt="pop-rankingcard1" class="pt20 w-100">
+                      </picture>
+                      <div class="number position-absolute top-0 start-0">
+                        <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml4">
+                      </div>
+                   </div>
                 </div>
-              </a>
-           </div>
-          </div> 
-          <div class="col-lg-4 position-relative">
-            <div class="rankingcard">
-              <picture>
-                <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-2.png">
-                <img src="../assets/images/ranking/pop/pop-2.png" alt="pop-rankingcard2" class="pt20">
-              </picture>
-              <div class="number position-absolute top-0 start-0">
-                <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
+                 <!--2-->
+                <div class="swiper-slide">
+                  <div class="rankingcard position-relative">
+                      <picture>
+                        <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-2.png">
+                        <img src="../assets/images/ranking/pop/pop-2.png" alt="pop-rankingcard2" class="pt20 w-100">
+                      </picture>
+                      <div class="number position-absolute top-0 start-0">
+                        <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml4">
+                      </div>
+                     </div>
+                </div>
+                 <!--3-->
+                <div class="swiper-slide">
+                  <div class="rankingcard position-relative">
+                      <picture>
+                        <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
+                        <img src="../assets/images/ranking/pop/pop-3.png" alt="pop-rankingcard3" class="pt20 w-100">
+                      </picture>
+                      <div class="number position-absolute top-0 start-0">
+                        <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml4">
+                      </div>
+                     </div>
+                </div>
+                 <!--4-->
+                <div class="swiper-slide">
+                  <div class="rankingcard position-relative">
+                      <picture>
+                        <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-4.png">
+                        <img src="../assets/images/ranking/pop/pop-4.png" alt="pop-rankingcard4" class="pt20 w-100">
+                      </picture>
+                      <div class="number position-absolute top-0 start-0">
+                        <img src="../assets/images/ranking/數字/4.png" alt="number4" class="ml4">
+                      </div>
+                     </div>
+                </div>
+            
               </div>
-             </div>
-          </div>
-         <div class="col-lg-4">
-          <div class="rankingcard position-relative">
-            <picture>
-              <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
-              <img src="../assets/images/ranking/pop/pop-3.png" alt="pop-rankingcard2" class="pt20">
-            </picture>
-            <div class="number position-absolute top-0 start-0">
-              <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
             </div>
-           </div>
-         </div>
-        </div>
-       </div>
-     </div>
-  
-
-      <!--手機輪播版-->
-  <div class="container d-block d-lg-none">
-    <div id="carouselpopularRank" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselpopularRank" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselpopularRank" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselpopularRank" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item rankingcard active position-relative">
-          <a href="dramaPost.html" class="d-block">
-            <picture>
-              <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
-              <img src="../assets/images/ranking/pop/pop-1.png" alt="pop-rankingcard1" class="pt20 w-100">
-            </picture>
-          </a>
-          <div class="number position-absolute top-0 start-0">
-            <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
-          </div>
-        </div>
-        <div class="carousel-item position-relative">
-          <picture>
-            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-2.png">
-            <img src="../assets/images/ranking/pop/pop-2.png" alt="pop-rankingcard2" class="pt20 w-100">
-          </picture>
-          <div class="number position-absolute top-0 start-0">
-            <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
-          </div>
-         </div>
-        <div class="carousel-item position-relative">
-          <picture>
-            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
-            <img src="../assets/images/ranking/pop/pop-3.png" alt="pop-rankingcard2" class="pt20 w-100">
-          </picture>
-          <div class="number position-absolute top-0 start-0">
-            <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
+      </div>
   
 
 
@@ -298,82 +263,69 @@
       </div>
     </div>  
     <!--電腦版-->
-    <div class="container d-none d-lg-block">
-      <div class="row">
-        <div class="col-lg-4 position-relative">
-          <div class="rankingcard">
-            <picture>
-              <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
-              <img src="../assets/images/ranking/pop/pop-3.png" alt="new-rankingcard1" class="pt20">
-            </picture>
-            <div class="number position-absolute top-0 start-0">
-              <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
+    <div class="newrank">
+      <div class="container">
+        <div class="rankswiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+               <!--1-->
+              <div class="swiper-slide">
+                <div class="rankingcard position-relative">
+                    <picture>
+                      <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
+                      <img src="../assets/images/ranking/pop/pop-3.png" alt="new-rankingcard1" class="pt20 w-100">
+                    </picture>
+                    <div class="number position-absolute top-0 start-0">
+                      <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml4">
+                    </div>
+                 </div>
+              </div>
+               <!--2-->
+              <div class="swiper-slide">
+                <div class="rankingcard position-relative">
+                    <picture>
+                      <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/new-2.png">
+                      <img src="../assets/images/ranking/pop/new-2.png" alt="new-rankingcard2" class="pt20 w-100">
+                    </picture>
+                    <div class="number position-absolute top-0 start-0">
+                      <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml4">
+                    </div>
+                   </div>
+              </div>
+               <!--3-->
+              <div class="swiper-slide">
+                <div class="rankingcard position-relative">
+                    <picture>
+                      <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
+                      <img src="../assets/images/ranking/pop/pop-1.png" alt="new-rankingcard3" class="pt20 w-100">
+                    </picture>
+                    <div class="number position-absolute top-0 start-0">
+                      <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml4">
+                    </div>
+                   </div>
+              </div>
+               <!--4-->
+              <div class="swiper-slide">
+                <div class="rankingcard position-relative">
+                    <picture>
+                      <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/new-4.png">
+                      <img src="../assets/images/ranking/pop/new-4.png" alt="new-rankingcard4" class="pt20 w-100">
+                    </picture>
+                    <div class="number position-absolute top-0 start-0">
+                      <img src="../assets/images/ranking/數字/4.png" alt="number4" class="ml4">
+                    </div>
+                   </div>
+              </div>
+          
             </div>
-         </div>
-        </div> 
-        <div class="col-lg-4 position-relative">
-          <div class="rankingcard">
-            <picture>
-              <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/new-2.png">
-              <img src="../assets/images/ranking/pop/new-2.png" alt="new-rankingcard2" class="pt20">
-            </picture>
-            <div class="number position-absolute top-0 start-0">
-              <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
-            </div>
-           </div>
-        </div>
-       <div class="col-lg-4">
-        <div class="rankingcard position-relative">
-          <picture>
-            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
-            <img src="../assets/images/ranking/pop/pop-1.png" alt="new-rankingcard3" class="pt20">
-          </picture>
-          <div class="number position-absolute top-0 start-0">
-            <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
-         </div>
-      </div>
-  </div>
     </div>
-   <!--手機版輪播-->
-   <div class="container d-block d-lg-none">
-    <div id="carouselnewRank" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselnewRank" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselnewRank" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselnewRank" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item rankingcard active position-relative">
-          <picture>
-            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-3.png">
-            <img src="../assets/images/ranking/pop/pop-3.png" alt="new-rankingcard1" class="pt20 w-100">
-          </picture>
-          <div class="number position-absolute top-0 start-0">
-            <img src="../assets/images/ranking/數字/1.png" alt="number1" class="ml10">
-          </div>
-        </div>
-        <div class="carousel-item position-relative">
-          <picture>
-            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/new-2.png">
-            <img src="../assets/images/ranking/pop/new-2.png" alt="new-rankingcard2" class="pt20 w-100">
-          </picture>
-          <div class="number position-absolute top-0 start-0">
-            <img src="../assets/images/ranking/數字/2.png" alt="number" class="ml10">
-          </div>
-         </div>
-        <div class="carousel-item position-relative">
-          <picture>
-            <source media="(min-width: 992px)" srcset="../assets/images/ranking/pop/pop-1.png">
-            <img src="../assets/images/ranking/pop/pop-1.png" alt="new-rankingcard3" class="pt20 w-100">
-          </picture>
-          <div class="number position-absolute top-0 start-0">
-            <img src="../assets/images/ranking/數字/3.png" alt="number3" class="ml10">
-          </div>
-          </div>
-        </div>
-      </div>
+
     </div>
+    
   </div> 
  </div>    
     </div> 
@@ -391,25 +343,24 @@
          <!--電腦版--> 
           <div class="text d-none d-lg-block">
             <h4>專屬個人主頁，做自己的樣子</h4>
-            <a href="myProfile.html" class="d-block bottom position-relative mt4">
+            <div class="bottom position-relative">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景">
               </picture>
-              <span class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg ">我的主頁<i class="bi bi-chevron-right"></i>
-              </span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的主頁<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
           <!--手機版-->
           <div class="text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
             <h4>專屬個人主頁，做自己的樣子</h4>
-            <a href="myProfile.html" class="bottom position-relative introbg mt4 mb10">
+            <div class="bottom position-relative introbg mt4 mb10">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景">
               </picture>
-              <span href="myProfile.html" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的主頁<i class="bi bi-chevron-right"></i></span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的主頁<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
         </div>
       </div>
@@ -419,24 +370,24 @@
           <!--電腦版-->
           <div class="text d-none d-lg-block">
             <h4 class="d-inline">找到新劇友，一起穿越劇中世界</h4>
-            <a href="friend.html" class="bottom position-relative">
+            <div class="bottom position-relative">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景" class="py5">
               </picture>
-              <span  class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的劇友<i class="bi bi-chevron-right"></i></span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的劇友<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
           <!--手機版-->
           <div class="text text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
             <h4 class="d-inline">找到新劇友，一起穿越劇中世界</h4>
-            <a href="friend.html" class="bottom position-relative">
+            <div class="bottom position-relative">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景" class="mt5 mb10">
               </picture>
-              <span href="friend.html" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的劇友<i class="bi bi-chevron-right"></i></span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的劇友<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
         </div>
         <div class="col-lg-7 mx-lg3 py-lg18">
@@ -452,24 +403,24 @@
          <!--電腦版-->  
           <div class="text d-none d-lg-block">
             <h4>扮演最愛角色在線跨劇互動</h4>
-            <a href="myCosplay.html" class="bottom position-relative mt4">
+            <div class="bottom position-relative">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景">
               </picture>
-              <span class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的角色卡<i class="bi bi-chevron-right"></i></span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的角色卡<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
            <!--手機版-->
            <div class="text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
             <h4>扮演最愛角色在線跨劇互動</h4>
-            <a href="myCosplay.html" class="bottom position-relative introbg mt4 mb10">
+            <div class="bottom position-relative introbg mt4 mb10">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景">
               </picture>
-              <span class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的角色卡<i class="bi bi-chevron-right"></i></span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的角色卡<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
 
 
@@ -480,25 +431,25 @@
         <div class="col-lg-4 offset-md-1 align-items-center mt-lg10">
           <!--電腦版-->
           <div class="text d-none d-lg-block">
-            <h4>典藏經典，二十年後復刻悸動</h4>
-            <a href="myProfile.html" class="bottom position-relative">
+            <h4 class="d-inline">典藏經典，二十年後復刻悸動</h4>
+            <div class="bottom position-relative">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景" class="py5">
               </picture>
-              <span class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的典藏文<i class="bi bi-chevron-right"></i></span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的典藏文<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
           <!--手機版-->
           <div class="text text d-block d-lg-none position-absolute bottom-0 start-0 ml3">
             <h4 class="d-inline">典藏經典，二十年後復刻悸動</h4>
-            <a href="myProfile.html" class="bottom position-relative">
+            <div class="bottom position-relative">
               <picture>
                 <source media="(min-width: 992px)" srcset="../assets/images/deco/002.png">
                 <img src="../assets/images/deco/002.png" alt="按鈕背景" class="py5">
               </picture>
-              <span class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的典藏文<i class="bi bi-chevron-right"></i></span>
-            </a>           
+              <a href="#" class="position-absolute top-50 start-0 translate-middle-y pl6 fz-lg6 fw-7 link-dark line-height-lg">我的典藏文<i class="bi bi-chevron-right"></i></a>
+            </div>           
           </div>
         </div>
         <div class="col-lg-7 mx-lg3 py-lg10">
@@ -513,5 +464,33 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script> 
+      const swiper = new Swiper('.rankswiper', {
+
+    slidesPerView:1,
+    slidesPerGroup:1,   
+    spaceBetween: 12,
+    loop: true, 
+
+    breakpoints: {
+
+      992:{
+      slidesPerView:3,  
+      slidesPerGroup:1,  
+      spaceBetween: 24,
+      }
+    },
+
+    autoHeight: true,
+     
+     
+     autoplay: {
+     delay: 1500,
+   },
+   });
+  
+  </script>
+    
   </body>
 </html>
