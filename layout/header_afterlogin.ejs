@@ -1,9 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-dark header-nav">
-    <div class="container">
-      <a class="navbar-brand py12 py-lg4 w-25" href="index.html"><img src="../assets/images/deco/moviemeet logo.png" alt="logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg navbar-dark afterlogin">
+    <div class="container justify-content-md-between">
+      <a class="navbar-brand py12 py-lg4 w-50" href="index.html"><img src="../assets/images/deco/moviemeet logo.png" alt="logo"></a>
+      <div class="d-flex">
+        <a href="#" class="profile mr4"><img src="../assets/images/聊串/甄嬛聊串.png" alt="profileimg" 
+          class="object-fit-cover w-100 h-100 d-lg-none"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      
       <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
         <!--手機版選單-->
         <div class="d-lg-none">
@@ -20,9 +25,6 @@
                   <li class="nav-item mb7">
                     <a class="nav-link text-gray-100 ">典藏</a>
                   </li>
-                  <li class="nav-item mb7">
-                    <a href="nav-link text-gray-100">註冊/登入</a>
-                  </li>
                 </ul>
               <div class="search d-flex bg-gray-400 rounded-pill w-50 border-bg-gray-500 border-2">
                 <input class="form-control me-2 py-2 border-0 rounded-pill bg-gray-400 text-gray-300" type="search" placeholder="搜影劇、標籤" aria-label="Search">
@@ -34,9 +36,9 @@
         </div>
 
         <!--電腦選單-->
-       <div class="d-none d-lg-block d-lg-flex align-items-center w-75 ml37 justify-content-between pcnav">
+       <div class="d-none d-lg-block d-lg-flex align-items-center w-75 ml37 justify-content-between afterlogin">
         <div class="d-flex">
-          <ul class="navbar-nav mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
             <li class="nav-item mr8">
               <a class="nav-link active text-gray-100" aria-current="page" href="#">熱門</a>
             </li>
@@ -44,20 +46,25 @@
               <a class="nav-link text-gray-100" href="#">新劇</a>
             </li>
             <li class="nav-item mr8">
+                <a href="#" class="profile"><img src="../assets/images/聊串/甄嬛聊串.png" alt="profileimg" 
+                 class="object-fit-cover w-100 h-100"></a>
+             </li>
+
+            <li class="nav-item mr8">
               <a class="nav-link text-gray-100" href="#">劇友</a>
             </li>
             <li class="nav-item mr8">
               <a class="nav-link text-gray-100" href="#">典藏</a>
             </li>
-          </ul>
+           
+          </ul>  
+        </div> 
           <div class="search d-flex bg-gray-400 rounded-pill">
             <input class="form-control me-2 border-0 rounded-pill bg-gray-400 text-gray-300" type="search" placeholder="搜影劇、標籤" aria-label="Search">
             <button class="btn" type="submit"><span class="material-symbols-outlined text-gray-300">
               search
             </span></button>
           </div>
-        </div>
-          <button type="button" class="btn btn-link text-gray-100 text-decoration-none">註冊/登入</button>
        </div>
 
 
