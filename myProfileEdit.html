@@ -5,10 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>編輯資料</title>
-  <script type="module" crossorigin src="/moviemeet/assets/main-3398dba6.js"></script>
-  <link rel="stylesheet" href="/moviemeet/assets/main-a26dbf3f.css">
+  <script type="module" crossorigin src="/moviemeet/assets/main-8b373457.js"></script>
+  <link rel="stylesheet" href="/moviemeet/assets/main-bf8343bc.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark afterlogin">
+    <div class="container justify-content-md-between">
+      <a class="navbar-brand py12 py-lg4 w-50" href="index.html"><img src="/moviemeet/assets/moviemeet logo-0fe13413.png" alt="logo"></a>
+      <div class="d-flex">
+        <a href="myProfile.html" class="profile mr4"><img src="/moviemeet/assets/甄嬛聊串-a64893ae.png" alt="profileimg" 
+          class="object-fit-cover w-100 h-100 d-lg-none"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      
+      <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
+        <!--手機版選單-->
+        <div class="d-lg-none">
+                <ul class="navbar-nav mt8">
+                  <li class="nav-item mb7">
+                    <a class="nav-link active text-gray-100" aria-current="page" href="hitoDramaList.html">熱門</a>
+                  </li>
+                  <li class="nav-item mb7">
+                    <a class="nav-link text-gray-100" href="newDramaList.html">新劇</a>
+                  </li>
+                  <li class="nav-item mb7">
+                    <a class="nav-link text-gray-100" href="friend.html">劇友</a>
+                  </li>
+                  <li class="nav-item mb7">
+                    <a class="nav-link text-gray-100" href="login.html">典藏</a>
+                  </li>
+                </ul>
+              <div class="search d-flex bg-gray-400 rounded-pill w-50 border-bg-gray-500 border-2">
+                <input class="form-control me-2 py-2 border-0 rounded-pill bg-gray-400 text-gray-300" type="search" placeholder="搜影劇、標籤" aria-label="Search">
+                <button class="btn" type="submit"><span class="material-symbols-outlined text-gray-300 fz-6 align-bottom">
+                  search
+                </span></button>
+              </div>
+            </div>
+        </div>
+
+        <!--電腦選單-->
+       <div class="d-none d-lg-block d-lg-flex align-items-center w-75 ml37 justify-content-between afterlogin">
+        <div class="d-flex">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item mr8">
+              <a class="nav-link active text-gray-100" aria-current="page" href="hitoDramaList.html">熱門</a>
+            </li>
+            <li class="nav-item mr8">
+              <a class="nav-link text-gray-100" href="newDramaList.html">新劇</a>
+            </li>
+            <li class="nav-item mr8">
+                <a href="myProfile.html" class="profile"><img src="/moviemeet/assets/甄嬛聊串-a64893ae.png" alt="profileimg" 
+                 class="object-fit-cover w-100 h-100"></a>
+             </li>
+
+            <li class="nav-item mr8">
+              <a class="nav-link text-gray-100" href="friend.html">劇友</a>
+            </li>
+            <li class="nav-item mr8">
+              <a class="nav-link text-gray-100" href="myProfile.html">典藏</a>
+            </li>
+           
+          </ul>  
+        </div> 
+          <div class="search d-flex bg-gray-400 rounded-pill">
+            <input class="form-control me-2 border-0 rounded-pill bg-gray-400 text-gray-300" type="search" placeholder="搜影劇、標籤" aria-label="Search">
+            <button class="btn" type="submit"><span class="material-symbols-outlined text-gray-300">
+              search
+            </span></button>
+          </div>
+       </div>
+
+
+    </div>
+  </nav>
     <header>
         <div class="container-fluid text-center py20 py-lg10">
             <h4>編輯資料</h4>
@@ -225,52 +297,7 @@
       <form  class="container">
 
 
-
-
       </form> 
-
-      <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown button
-    </button>
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-      <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#logoutModal">登出</button></li>
-      <li><button class="dropdown-item btn-link" type="button"><a href="#">修改郵箱/密碼</a></button></li>
-      <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">刪除帳號</button></li>
-    </ul>
-  </div>
-
-
-  <!-- 登出 Modal -->
-<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content rounded-4 shadow bg-dark text-gray-300">
-        <div class="modal-body p10 text-center">
-          <h5 class="mb-0" id="logoutLabel">確定登出嗎？</h5>
-        </div>
-        <div class="modal-footer flex-nowrap">
-          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end py4"><strong>確定</strong></button>
-          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 text-gray-300" data-bs-dismiss="modal">取消</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-   <!-- 刪除 Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content rounded-4 shadow bg-dark text-gray-300">
-        <div class="modal-body p10 text-center">
-          <h5 class="mb-0" id="deleteLabel">確定刪除嗎？</h5>
-        </div>
-        <div class="modal-footer flex-nowrap">
-          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end py4"><strong>確定</strong></button>
-          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 text-gray-300" data-bs-dismiss="modal">取消</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
     </main>
 
