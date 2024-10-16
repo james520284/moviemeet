@@ -1,0 +1,86 @@
+.dramalist-main {
+  .breadcrumb-text {
+    font-size: 14px;
+    color: $gray-300;
+  }
+
+  .md-btn-bg {
+    border: 1px solid $gray-100;
+    color: $gray-200;
+    background-color: $gray-500;
+  }
+
+  .btn-icon {
+    padding-right: 12px;
+  }
+
+  .filtericon {
+    color: $gray-100;
+    font-size: 48px;
+  }
+
+  .filter-box {
+    border: 1px solid;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .dropdown a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .filter-type {
+    border-color: transparent;
+    background: radial-gradient(
+      48.5% 282.29% at 6.96% 138.75%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: 8px 12px;
+  }
+
+  .filter-text {
+    text-align: start;
+    color: $gray-100;
+  }
+
+  .filter-tag {
+    border-radius: 4px;
+    background: radial-gradient(
+      107.33% 208.55% at 6.96% 138.75%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: 8px 12px;
+  }
+
+  .filter-lg-text {
+    border-radius: 4px;
+    background: radial-gradient(
+      107.33% 208.55% at 6.96% 138.75%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: 0px 8px;
+  }
+
+  .card-bg {
+    background-color: $gray-500;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: $gray-300;
+  }
+
+  .button-bell {
+    border-color: transparent;
+    border-radius: 80px;
+    background-color: rgba(10, 10, 10, 0.6);
+    color: $gray-100;
+    padding: 0px 4px;
+  }
+}
