@@ -326,7 +326,9 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "gray-400": $gray-400, //moviemeet
+  "gray-300": $gray-300, //moviemeet
 ) !default;
 // scss-docs-end theme-colors-map
 
