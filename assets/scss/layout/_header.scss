@@ -11,5 +11,15 @@
     white-space: nowrap;
   }
 
+  // 嚼勁修改
+  .nav-link,
+  .login-btn{
+    transition:.5s;
+    &:hover{
+      transform: scale(1.1);
+      color: $primary;
+    }
+  }
+  
 }
 

@@ -9,7 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
-    <title>index</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>我與劇中主角相會時</title>
   </head>
   <body >
     <%- include('./layout/header_afterlogin'); -%>
@@ -43,18 +44,18 @@
               </p>
               <ul class="text-gray-200 pl0 fz-5">
                 <li class="mb4 profile-card-links">
-                  <a href="#" class="d-flex justify-content-center align-items-center"
-                    ><i class="bi bi-chat-right-text fz-6 mr3 text-primary"></i><span class="mr2">12</span>則聊串</a
+                  <span href="#" class="d-flex justify-content-center align-items-center"
+                    ><i class="bi bi-chat-right-text fz-6 mr3 text-primary"></i><span class="mr2">12</span>則聊串</span
                   >
                 </li>
                 <li class="mb4 profile-card-links">
-                  <a href="#" class="d-flex justify-content-center align-items-center"
-                    ><i class="bi bi-people fz-6 mr3 text-primary"></i><span class="mr2">18</span>個劇友</a
+                  <span href="#" class="d-flex justify-content-center align-items-center"
+                    ><i class="bi bi-people fz-6 mr3 text-primary"></i><span class="mr2">18</span>個劇友</span
                   >
                 </li>
                 <li class="profile-card-links">
-                  <a href="#" class="d-flex justify-content-center align-items-center"
-                    ><i class="bi bi-bell fz-6 mr3 text-primary"></i><span class="mr2">64</span>個關注</a
+                  <span href="#" class="d-flex justify-content-center align-items-center"
+                    ><i class="bi bi-bell fz-6 mr3 text-primary"></i><span class="mr2">64</span>個關注</span
                   >
                 </li>
               </ul>
@@ -63,7 +64,47 @@
                   <a href="myProfileEdit.html" class="d-flex justify-content-center align-items-center py1 px9 setting-btns "><i class="bi bi-pencil mr3"></i>編輯</a>
                 </li>
                 <li>
-                  <a href="#" class="d-flex justify-content-center align-items-center py1 px9 setting-btns"><i class="bi bi-gear mr3"></i>設定</a>
+                  <!-- 設定下拉選單 -->
+                  <div class="dropdown">
+                    <a class="d-flex justify-content-center align-items-center py1 px9 setting-btns" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-gear mr3"></i>
+                      設定
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                      <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#logoutModal">登出</button></li>
+                      <li><button class="dropdown-item btn-link" type="button"><a href="forgotPassword.html">修改密碼</a></button></li>
+                      <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">刪除帳號</button></li>
+                    </ul>
+                  </div>
+                  </li>
+                  <!-- 登出 Modal -->
+                <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content rounded-4 shadow bg-dark text-gray-300">
+                        <div class="modal-body p10 text-center">
+                          <h5 class="mb-0" id="logoutLabel">確定登出嗎？</h5>
+                        </div>
+                        <div class="modal-footer flex-nowrap">
+                          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end py4"><strong>確定</strong></button>
+                          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 text-gray-300" data-bs-dismiss="modal">取消</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 刪除 Modal -->
+                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content rounded-4 shadow bg-dark text-gray-300">
+                        <div class="modal-body p10 text-center">
+                          <h5 class="mb-0" id="deleteLabel">確定刪除嗎？</h5>
+                        </div>
+                        <div class="modal-footer flex-nowrap">
+                          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end py4"><strong>確定</strong></button>
+                          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 text-gray-300" data-bs-dismiss="modal">取消</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>  
               </ul>
             </div>
@@ -891,7 +932,6 @@
     </main>
 
     <script type="module" src="../main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
       feather.replace();
