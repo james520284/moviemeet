@@ -1,4 +1,25 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.header-nav{
+  .search ::placeholder {
+    color: #A3A3A3;
+  }
+
+  .d-lg-none .navbar-nav a{
+    font-size: 20px;
+  }
+
+  .pcnav{
+    white-space: nowrap;
+  }
+
+  // 嚼勁修改
+  .nav-link,
+  .login-btn{
+    transition:.5s;
+    &:hover{
+      transform: scale(1.1);
+      color: $primary;
+    }
+  }
+  
 }
+

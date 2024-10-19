@@ -1,0 +1,390 @@
+.myProfile-main {
+  .profile-card {
+    border: 1px solid $gray-300;
+    border-radius: 10px;
+  
+    img {
+      width: 240px;
+      height: 240px;
+    }
+    .profile-pic-container {
+      .set-btn {
+        width: 44px;
+        height: 44px;
+        bottom: 0;
+        right: 10px;
+        border: 2px solid $gray-300;
+        @include hover-transform(1.2);
+      }
+  
+      .profile-pic {
+        object-position: 10% 20%;
+        border: 2px solid $gray-300;
+      }
+    }
+  
+    .my-icon {
+      width: 28px;
+      height: 28px;
+      color: $primary;
+    }
+    .setting-btns {
+      border: 1px solid #444444;
+      white-space:nowrap;
+      @include hover-transform(1.05);
+      .my-setting-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
+  }
+
+  .following-card {
+    border: 1px solid $gray-300;
+    border-radius: 10px;
+    .carousel-indicators {
+      position: absolute;
+      bottom: -48px;
+      .active {
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+      }
+      button {
+        background-color: $gray-300;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+      }
+    }
+    .carousel-inner {
+      .card {
+        @include hover-transform(1.05);
+        .img-object {
+          height: 109px;
+          object-fit: cover;
+          width: 100%;
+          border-radius: 0;
+        }
+        .card-body {
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 8px;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          color: white;
+        }
+      }
+    }
+  }
+  
+  
+  .chat-ic {
+    transform: scaleX(-1);
+  }
+  
+  .chat-btn {
+    @include hover-transform(1.05);
+  }
+  .poster-avatar {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border: 2px solid white;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .post-slide {
+    max-width: 960px;
+    height: 240px;
+  
+    img {
+      object-fit: cover;
+      // object-position: top;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .txt-img {
+    max-width: 960px;
+    height: 240px;
+    background-color: $primary;
+  }
+  
+  .post-hashtag li+li {
+    margin-left: 12px;
+  }
+  
+  .userchat-avatar,
+  .mychat-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .three-dots-dropdown-menu {
+    min-width: none;
+    border: 1px solid $gray-400;
+    background-color: rgba($color: $gray-600, $alpha: .8);
+  
+    .dropdown-item {
+      color: white;
+  
+      &:hover {
+        color: $primary;
+      }
+  
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+  
+  .like-btn-head,
+  .like-btn {
+    padding-top: 4px;
+    width: 42px;
+    height: 42px;
+  
+    &.active {
+      background-color: $gray-600;
+      color: $primary;
+    }
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  .chat-item+.chat-item {
+    margin-top: 16px;
+  }
+  
+  .chat-action li+li {
+    margin-left: 0px;
+  
+    &::before {
+      content: '｜';
+  
+    }
+  }
+  
+  .myreply-avatar {
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+  
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .reply {
+    &-bar {
+      color: $gray-300;
+      background-color: transparent;
+      border: 1px solid $gray-400;
+    }
+  
+    ::placeholder {
+      font-size: 14px;
+      color: $gray-300;
+    }
+  
+    &-btn {
+      color: $gray-300;
+      padding: 0;
+      top: 20%;
+      right: 2%;
+  
+    }
+  }
+  @include rwd-sm-max {
+    .post-content p{
+      font-size: 14px;
+    }
+    .search {
+      width: 100%;
+    }
+  
+    .like-btn {
+      padding-top: 0;
+      width: 60px;
+      height: auto;
+      background-color: $gray-500;
+    }
+  
+    .chat-content {
+      padding: 4px;
+      border-radius: 4px;
+      background-color: #333333;
+    }
+  }
+  
+  .my-collections {
+    border: 1px solid $gray-300;
+    border-radius: 10px;
+    .nav-tabs {
+      border-bottom: 1px solid $gray-300;
+      .nav-link {
+        background-color: transparent;
+        border: none;
+      }
+      .nav-link.active {
+        border-bottom: 3px solid $primary;
+        color: white;
+      }
+    }
+  
+    .collection-card {
+      @include hover-transform(1.05);
+      .add-collection-btn {
+        width: 100%;
+        height: 134px;
+        border-radius: 0;
+      }
+      .img-object {
+        height: 134px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 0;
+      }
+
+      .card-body {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 8px;
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        color: white;
+        text-align: center;
+      }
+    }
+    
+  }
+  
+  
+  
+  .modal-btn-close {
+    top: -6px;
+    right: 0px;
+    opacity: 1;
+    padding: 0;
+  }
+  
+  .modal-content {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  input[type="text"],
+  input[type="url"] {
+    color: $gray-300;
+  }
+  
+  input:focus {
+    background-color: transparent;
+  }
+  
+  .subtitle {
+    width: 25%;
+  }
+  
+  .option {
+    width: 75%;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .uploadDramaImg,
+  .changeDramaImg {
+    cursor: pointer;
+  }
+  
+  .uploadStyle {
+    width: 100px;
+    height: 100px;
+    border: 1px solid $gray-300;
+    border-radius: 8px;
+  }
+  
+  
+  
+  .img-item {
+    position: relative;
+    width: 100%;
+    height: 100px;
+  
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .img-btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(4px, -8px);
+    }
+  }
+  ::placeholder {
+    color: $gray-400;
+  }
+  .chat-textarea {
+    background-color: transparent;
+    resize: none;
+  }
+  
+  .hashtag a+a {
+    margin-left: 8px;
+  }
+  
+  @include rwd-sm-max {
+    .modal-content {
+      max-width: 320px;
+    }
+  
+    .subtitle {
+      width: 100%;
+    }
+  
+    .option {
+      width: 100%;
+    }
+  
+    .uploadStyle {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .img-item {
+      height: 60px;
+    }
+  }
+  .btn-hover {
+    :hover {
+      transform: scale(1.2);
+    }
+  }
+  
+  
+}

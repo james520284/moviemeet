@@ -1,0 +1,25 @@
+.afterlogin{
+    white-space: nowrap;
+
+    .profile{
+        display: inline-block;
+        width: 80px;   /* 容器的宽度 */
+        height: 80px;  /* 容器的高度 */
+        border-radius: 50%;  /* 将 a 标签变为圆形 */
+        overflow: hidden; 
+
+        @media(max-width:767px) {
+            width: 40px;   /* 容器的宽度 */
+            height: 40px; 
+        }
+        
+    }
+    // 嚼勁修改
+    .search ::placeholder {
+        color: #A3A3A3;
+    }
+
+
+
+
+}
