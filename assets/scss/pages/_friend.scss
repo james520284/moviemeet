@@ -1,7 +1,5 @@
 .friend-main{
-    .sec1 {
-        
-    }
+    
     .sec2{
         .search-oldFriends{
             width: 25%;
@@ -14,8 +12,10 @@
                 }
             }
             &-btn {
-                top: 20%;
+                line-height: 0;
+                top: 50%;
                 right: 5%;
+                transform: translateY(-50%);
             }
             ::placeholder{
                 color: $gray-400;

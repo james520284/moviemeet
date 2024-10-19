@@ -37,9 +37,7 @@
         height: 20px;
       }
     }
-    .profile-card-links {
-      @include hover-transform(1.2);
-    }
+    
   }
 
   .following-card {
